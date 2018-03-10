@@ -1,0 +1,155 @@
+
+The present implementation reflects the version of the STL document
+dated: August 18, 1994.
+
+It has many minor differences from the previous versions. The most
+significant are:
+
+	- inclusion of reference types in the allocators and containers;
+	- inclusion of the reverse iterator type and rbegin(), rend()
+	  functions in the containers;
+	- inclusion of swap function in the containers;
+	- elimination of empty and restrictor throughout.
+
+To illustrate how to use allocators, several types of allocators and
+containers using them are included.
+
+The new version of STL has been compiled on:
+
+Borland 4.0
+EDG
+IBM xlC
+IBM C set
+
+It would take an effort to port this code to a cfront based
+compilers (e.g. HP). We have no experience with G++. 
+
+There are some cases on which any of these compilers do not compile STL
+code, but it is usually corner cases. Moreover, on Borland, for
+example, STL does not compile the same cases on which Borland's own
+library does not compile. 
+
+We did not have time to put the ifdefs that will work around different
+compiler bugs. The code is "generic" with only some workarounds for
+the Borland compiler in it.
+
+Users of Borland need to either comment out the definitions of min and
+max in algobase.h or comment out Borland's min and max in stdlib.h.
+
+You might encounter the following compiler problems:
+
+1. functions that take const T & as an argument do not match arguments
+of type T&. (Happens with max and min, for example.) The error
+messages on Borland say "Illegal structure operation in ...". Three
+possible workarounds are:
+	- replacing const T& with T&;
+	- replacing const T& with T;
+	- providing a manual instantiation of an offending function.
+
+2. Compiler matches templates incorrectly. That happens often if
+different memory models are used together. copy, for example, is
+instantiated for int* and then the same instance is used for copy(int
+__huge *, ...). This bug is very hard to catch, because it is only run
+time detectable. (Occasionally it might be indicated with a warning:
+"Suspicious pointer conversion".) 
+
+3. destroy does not work for your built-in type. (Most compilers have
+a variant of this one.) As a workaround, provide your own destroy for
+the type. (We include many of them in defalloc.h)
+
+
+The only non-implemented parts of the STL as described in the document
+are:
+
+1) Constructor templates and insert templates for containers taking
+two arbitrary iterators. They are simulated by a constructors taking
+pointers.
+
+2) Parameterization of containers with a template allocator is
+simulated with the help of cpp.
+
+3) Since bool is not yet implemented as a type on most compilers -
+vector<bool> is impemented as bit_vector.
+
+4) Default template arguments have to be always explicitly given.
+
+The total amount of code that would need to be re-written when the
+corresponding features are supported is of the order of 20 lines.
+
+
+We intend to keep improving the implementation.  Therefore, we would
+appreciate your comments and algorithmic bug reports.  Please send them
+to:
+
+stepanov@mti.sgi.com
+
+or to:
+
+lee@hpl.hp. com
+
+or to:
+
+musser@cs.rpi.edu
+
+Please do not send us reports of compiler bugs.  Report them to your
+compiler vendors.
+
+The following files are included:
+
+algo.h - includes all the algorithms
+algobase.h - auxiliary file
+bool.h - simulates bool
+bvector.h - bit_vector
+defalloc.h - allocator
+deque.h - deque
+doc.bar.ps - postscript of the document with change bars from the previous 
+	version of the document
+doc.ps - postscript of the document
+doc.mif - framemaker's Maker Interchange Format of the document
+faralloc.h - far_allocator 
+fdeque.h - far_deque
+flist.h - far_list
+fmap.h - far_map
+fmultmap.h - far_multimap
+fmultset.h - far_multiset
+fset.h - far_set
+function.h - operators, function objects and function adaptors
+hdeque.h - huge_deque
+heap.h - auxiliary file
+hlist.h - huge_list
+hmap.h - huge_map
+hmultmap.h - huge_multimap
+hmultset.h - huge_multiset
+hset.h - huge_set
+hugalloc.h - huge_allocator
+hvector.h - huge_vector
+iterator.h - iterator tags, stream iterators and iterator adaptors
+lbvector.h - long_bit_vector
+ldeque.h - long_deque
+list.h - list
+llist.h - long_list
+lmap.h - long_map
+lmultmap.h - long_multimap
+lmultset.h - long_multiset
+lngalloc.h - long_allocator
+lset.h - long_set
+map.h - map
+multimap.h - multimap
+multiset.h - multiset
+neralloc.h - near_allocator
+nmap.h - near_map
+nmultmap.h - near_multimap
+nmultset.h - near_multiset
+nset.h - near_set
+pair.h - pair
+projectn.h - auxiliary file
+random.cpp - random number generator. It should be compiled and 
+	linked if random_shuffle is used.
+set.h - set
+stack.h - container adaptors
+tempbuf.cpp - an auxiliary buffer for get_temporary_buffer; it should be 
+	compiled and linked if get_temporary_buffer, stable_partition,
+	inplace_merge or stable_sort are used.
+tempbuf.h - get_temporary_buffer
+tree.h - auxiliary file
+vector.h - vector

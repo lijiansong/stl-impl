@@ -1,0 +1,635 @@
+=== diff old/algo.h new/algo.h
+
+80,81c80,81
+< template <class InputIterator>
+< InputIterator adjacent_find(InputIterator first, InputIterator last) {
+---
+> template <class ForwardIterator>
+> ForwardIterator adjacent_find(ForwardIterator first, ForwardIterator last) {
+83c83
+<     InputIterator next = first;
+---
+>     ForwardIterator next = first;
+91,93c91,93
+< template <class InputIterator, class BinaryPredicate>
+< InputIterator adjacent_find(InputIterator first, InputIterator last,
+< 			    BinaryPredicate binary_pred) {
+---
+> template <class ForwardIterator, class BinaryPredicate>
+> ForwardIterator adjacent_find(ForwardIterator first, ForwardIterator last,
+> 			      BinaryPredicate binary_pred) {
+95c95
+<     InputIterator next = first;
+---
+>     ForwardIterator next = first;
+901,1043d900
+< 	  class RandomAccessIterator3, class Distance, class T>
+< RandomAccessIterator3 __merge_aux(RandomAccessIterator1 first1,
+< 				  RandomAccessIterator1 last1,
+< 				  RandomAccessIterator2 first2,
+< 				  RandomAccessIterator2 last2,
+< 				  RandomAccessIterator3 result,
+< 				  Distance& fill_pointer, T*){
+<     Distance len = 0;
+<     while (first1 != last1 && first2 != last2 && len < fill_pointer) {
+< 	++len;
+< 	if (*first2 < *first1)
+< 	    *result++ = *first2++;
+< 	else
+< 	    *result++ = *first1++;
+<     }
+<     if (fill_pointer == len) {
+< 	raw_storage_iterator<RandomAccessIterator3, T> p = result;
+< 	result += (last1 - first1) + (last2 - first2);
+< 	fill_pointer += (last1 - first1) + (last2 - first2);
+< 	while (first1 != last1 && first2 != last2)
+< 	    if (*first2 < *first1)
+< 		*p++ = *first2++;
+< 	    else
+< 		*p++ = *first1++;
+< 	copy(first2, last2, copy(first1, last1, p));
+<     } else if (first2 == last2) {
+< 	while (first1 != last1 && len < fill_pointer) { 
+< 	    ++len;
+< 	    *result++ = *first1++;
+< 	}
+< 	if (fill_pointer == len) {
+< 	    raw_storage_iterator<RandomAccessIterator3, T> p = result;  
+< 	    result += last1 - first1;
+< 	    fill_pointer += last1 - first1;
+< 	    while (first1 != last1) *p++ = *first1++;
+< 	}
+<     } else {
+< 	while (first2 != last2 && len < fill_pointer) { 
+< 	    ++len;
+< 	    *result++ = *first2++;
+< 	}
+< 	if (fill_pointer == len) {
+< 	    raw_storage_iterator<RandomAccessIterator3, T> p = result;  
+< 	    result += last2 - first2;
+< 	    fill_pointer += last2 - first2;
+< 	    while (first2 != last2) *p++ = *first2++;
+< 	}
+<     }
+<     return result;
+< }       
+< 
+< template <class RandomAccessIterator1, class RandomAccessIterator2,
+< 	  class RandomAccessIterator3, class Distance, class T, class Compare>
+< RandomAccessIterator3 __merge_aux(RandomAccessIterator1 first1,
+< 				  RandomAccessIterator1 last1,
+< 				  RandomAccessIterator2 first2,
+< 				  RandomAccessIterator2 last2,
+< 				  RandomAccessIterator3 result,
+< 				  Distance& fill_pointer, T*, Compare comp){
+<     Distance len = 0;
+<     while (first1 != last1 && first2 != last2 && len < fill_pointer) {
+< 	++len;
+< 	if (comp(*first2, *first1))
+< 	    *result++ = *first2++;
+< 	else
+< 	    *result++ = *first1++;
+<     }
+<     if (fill_pointer <= len) {
+< 	raw_storage_iterator<RandomAccessIterator3, T> p = result;
+< 	result += (last1 - first1) + (last2 - first2);
+< 	fill_pointer += (last1 - first1) + (last2 - first2);
+< 	while (first1 != last1 && first2 != last2)
+< 	    if (comp(*first2, *first1))
+< 		*p++ = *first2++;
+< 	    else
+< 		*p++ = *first1++;
+< 	copy(first2, last2, copy(first1, last1, p));
+<     } else if (first2 == last2) {
+< 	while (first1 != last1 && len < fill_pointer) { 
+< 	    ++len;
+< 	    *result++ = *first1++;
+< 	}
+< 	if (fill_pointer == len) {
+< 	    raw_storage_iterator<RandomAccessIterator3, T> p = result;  
+< 	    result += last1 - first1;
+< 	    fill_pointer += last1 - first1;
+< 	    while (first1 != last1) *p++ = *first1++;
+< 	}
+<     } else {
+< 	while (first2 != last2 && len < fill_pointer) { 
+< 	    ++len;
+< 	    *result++ = *first2++;
+< 	}
+< 	if (fill_pointer == len) {
+< 	    raw_storage_iterator<RandomAccessIterator3, T> p = result;  
+< 	    result += last2 - first2;
+< 	    fill_pointer += last2 - first2;
+< 	    while (first2 != last2) *p++ = *first2++;
+< 	}
+<     }
+<     return result;
+< }       
+< 
+< template <class RandomAccessIterator1, class RandomAccessIterator2,
+< 	  class Distance, class T>
+< void __merge_sort_loop_aux(RandomAccessIterator1 first,
+< 			   RandomAccessIterator1 last, 
+< 			   RandomAccessIterator2 result, Distance step_size,
+< 			   Distance& fill_pointer, T*) {
+<     Distance two_step = 2 * step_size;
+< 
+<     while (last - first >= two_step) {
+< 	result = __merge_aux(first, first + step_size, first + step_size,
+< 			     first + two_step, result, fill_pointer, (T*)0);
+< 	first += two_step;
+<     }
+<     step_size = min(Distance(last - first), step_size);
+< 
+<     __merge_aux(first, first + step_size, first + step_size, last, result,
+< 		fill_pointer, (T*)0);
+< }
+< 
+< template <class RandomAccessIterator1, class RandomAccessIterator2,
+< 	  class Distance, class T, class Compare>
+< void __merge_sort_loop_aux(RandomAccessIterator1 first,
+< 		       RandomAccessIterator1 last, 
+< 		       RandomAccessIterator2 result, Distance step_size,
+< 		       Distance& fill_pointer, T*, Compare comp) {
+<     Distance two_step = 2 * step_size;
+< 
+<     while (last - first >= two_step) {
+< 	result = __merge_aux(first, first + step_size, first + step_size, 
+< 			     first + two_step, result, fill_pointer, (T*)0,
+< 			     comp);
+< 	first += two_step;
+<     }
+<     step_size = min(Distance(last - first), step_size);
+< 
+<     __merge_aux(first, first + step_size, first + step_size, last, result, 
+< 		fill_pointer, (T*)0, comp);
+< }
+< 
+< template <class RandomAccessIterator1, class RandomAccessIterator2,
+1103,1104c960,961
+< 			       RandomAccessIterator last,
+< 			       Pointer buffer, Distance& fill_pointer, T*) {
+---
+> 			      RandomAccessIterator last,
+> 			      Pointer buffer, Distance*, T*) {
+1109a967
+> 
+1111,1112c969
+< 	__merge_sort_loop_aux(first, last, buffer, step_size, fill_pointer,
+< 			      (T*)0);
+---
+> 	__merge_sort_loop(first, last, buffer, step_size);
+1122,1124c979,980
+< 			      RandomAccessIterator last,
+< 			      Pointer buffer, Distance& fill_pointer,
+< 			      T*, Compare comp) {
+---
+> 			      RandomAccessIterator last, Pointer buffer,
+> 			      Distance*, T*, Compare comp) {
+1132,1133c988
+< 	__merge_sort_loop_aux(first, last, buffer, step_size, fill_pointer,
+< 			      (T*)0, comp);
+---
+> 	__merge_sort_loop(first, last, buffer, step_size, comp);
+1143c998
+< 			    Distance buffer_size, Distance& fill_pointer, T*) {
+---
+> 			    Distance buffer_size, T*) {
+1147,1150c1002,1003
+< 	__stable_sort_adaptive(first, middle, buffer, buffer_size,
+< 			       fill_pointer, (T*)0);
+< 	__stable_sort_adaptive(middle, last, buffer, buffer_size,
+< 			       fill_pointer, (T*)0);
+---
+> 	__stable_sort_adaptive(first, middle, buffer, buffer_size, (T*)0);
+> 	__stable_sort_adaptive(middle, last, buffer, buffer_size, (T*)0);
+1152,1153c1005,1006
+< 	__merge_sort_with_buffer(first, middle, buffer, fill_pointer, (T*)0);
+< 	__merge_sort_with_buffer(middle, last, buffer, fill_pointer, (T*)0);
+---
+> 	__merge_sort_with_buffer(first, middle, buffer, (Distance*)0, (T*)0);
+> 	__merge_sort_with_buffer(middle, last, buffer, (Distance*)0, (T*)0);
+1156,1157c1009
+< 		     Distance(last - middle), buffer, buffer_size,
+< 		     fill_pointer, (T*)0);
+---
+> 		     Distance(last - middle), buffer, buffer_size, (T*)0);
+1164,1165c1016
+< 			    Distance buffer_size, Distance& fill_pointer, 
+< 			    T*, Compare comp) {
+---
+> 			    Distance buffer_size, T*, Compare comp) {
+1169,1172c1020,1021
+< 	__stable_sort_adaptive(first, middle, buffer, buffer_size,
+< 			       fill_pointer, (T*)0, comp);
+< 	__stable_sort_adaptive(middle, last, buffer, buffer_size,
+< 			       fill_pointer, (T*)0, comp);
+---
+> 	__stable_sort_adaptive(first, middle, buffer, buffer_size, (T*)0, comp);
+> 	__stable_sort_adaptive(middle, last, buffer, buffer_size, (T*)0, comp);
+1174,1177c1023,1026
+< 	__merge_sort_with_buffer(first, middle, buffer, fill_pointer,
+< 				 (T*)0, comp);
+< 	__merge_sort_with_buffer(middle, last, buffer, fill_pointer,
+< 				 (T*)0, comp);
+---
+> 	__merge_sort_with_buffer(first, middle, buffer, (Distance*)0, (T*)0,
+> 				 comp);
+> 	__merge_sort_with_buffer(middle, last, buffer, (Distance*)0, (T*)0,
+> 				 comp);
+1180,1181c1029
+< 		     Distance(last - middle), buffer, buffer_size,
+< 		     fill_pointer, (T*)0, comp);
+---
+> 		     Distance(last - middle), buffer, buffer_size, (T*)0, comp);
+1184c1032
+< template <class RandomAccessIterator, class Pointer, class Distance>
+---
+> template <class RandomAccessIterator, class Pointer, class Distance, class T>
+1187c1035
+< 			  pair<Pointer, Distance> p) {
+---
+> 			  pair<Pointer, Distance> p, T*) {
+1192,1195c1040,1043
+<     Distance fill_pointer = 0;
+<     __stable_sort_adaptive(first, last, p.first, p.second, fill_pointer,
+< 			   value_type(first));
+<     destroy(p.first, p.first + fill_pointer);
+---
+>     Distance len = min(p.second, last - first);
+>     copy(first, first + len, raw_storage_iterator<Pointer, T>(p.first));
+>     __stable_sort_adaptive(first, last, p.first, p.second, (T*)0);
+>     destroy(p.first, p.first + len);
+1199c1047
+< template <class RandomAccessIterator, class Pointer, class Distance,
+---
+> template <class RandomAccessIterator, class Pointer, class Distance, class T,
+1203c1051
+< 			  pair<Pointer, Distance> p, Compare comp) {
+---
+> 			  pair<Pointer, Distance> p, T*, Compare comp) {
+1208,1211c1056,1059
+<     Distance fill_pointer = 0;
+<     __stable_sort_adaptive(first, last, p.first, p.second, fill_pointer,
+< 			   value_type(first), comp);
+<     destroy(p.first, p.first + fill_pointer);
+---
+>     Distance len = min(p.second, last - first);
+>     copy(first, first + len, raw_storage_iterator<Pointer, T>(p.first));
+>     __stable_sort_adaptive(first, last, p.first, p.second, (T*)0, comp);
+>     destroy(p.first, p.first + len);
+1215c1063
+< template <class RandomAccessIterator, class Distance>
+---
+> template <class RandomAccessIterator, class T, class Distance>
+1217c1065
+< 			      RandomAccessIterator last, Distance*) {
+---
+> 			      RandomAccessIterator last, T*, Distance*) {
+1219c1067
+< 						    value_type(first)));
+---
+> 						    (T*)0), (T*)0);
+1222c1070
+< template <class RandomAccessIterator, class Distance, class Compare>
+---
+> template <class RandomAccessIterator, class T, class Distance, class Compare>
+1224c1072
+< 			      RandomAccessIterator last, Distance*,
+---
+> 			      RandomAccessIterator last, T*, Distance*,
+1227c1075
+< 						    value_type(first)), comp);
+---
+> 						    (T*)0), (T*)0, comp);
+1233c1081
+<     __stable_sort_aux(first, last, distance_type(first));
+---
+>     __stable_sort_aux(first, last, value_type(first), distance_type(first));
+1239c1087,1088
+<     __stable_sort_aux(first, last, distance_type(first), comp);
+---
+>     __stable_sort_aux(first, last, value_type(first), distance_type(first), 
+> 		      comp);
+1264c1113
+< 	if (*i < *first) 
+---
+> 	if (comp(*i, *first))
+1320c1169
+< 	if (*first < *result_first) 
+---
+> 	if (comp(*first, *result_first))
+1957,1958c1806
+< 		      Pointer buffer, Distance buffer_size,
+< 		      Distance& fill_pointer, T*) {
+---
+> 		      Pointer buffer, Distance buffer_size, T*) {
+1960,1972c1808,1809
+< 	BidirectionalIterator i = first;
+< 	Pointer j = buffer;
+< 	len2 = 0;
+< 	while (len2 < len1 && len2 < fill_pointer) {
+< 	    *buffer++ = *first++;
+< 	    ++len2;
+< 	}
+< 	raw_storage_iterator<Pointer, T> end_buffer = buffer;
+< 	while (len2++ < len1) {
+< 	    *end_buffer++ = *first++;
+< 	    ++fill_pointer;
+< 	}
+< 	merge(j, j + len1, middle, last, i);
+---
+>         Pointer end_buffer = copy(first, middle, buffer);
+>         merge(buffer, end_buffer, middle, last, first);
+1974,1986c1811,1812
+< 	BidirectionalIterator i = middle;
+< 	Pointer j = buffer;
+< 	len1 = 0;
+< 	while (len1 < len2 && len1 < fill_pointer) {
+< 	    *buffer++ = *middle++;
+< 	    ++len1;
+< 	}
+< 	raw_storage_iterator<Pointer, T> end_buffer = buffer;
+< 	while (len1++ < len2) {
+< 	    *end_buffer++ = *middle++;
+< 	    ++fill_pointer;
+< 	}
+< 	__merge_backward(first, i, j, j + len2, last);
+---
+>         Pointer end_buffer = copy(middle, last, buffer);
+>         __merge_backward(first, middle, buffer, end_buffer, last);
+2007c1833
+< 			 buffer_size, fill_pointer, (T*)0);
+---
+> 			 buffer_size, (T*)0);
+2009,2010c1835
+< 			 len2 - len22, buffer, buffer_size, fill_pointer,
+< 			 (T*)0);
+---
+> 			 len2 - len22, buffer, buffer_size, (T*)0);
+2019,2020c1844
+< 		      Pointer buffer, Distance buffer_size,
+< 		      Distance& fill_pointer, T*, Compare comp) {
+---
+> 		      Pointer buffer, Distance buffer_size, T*, Compare comp) {
+2022,2034c1846,1847
+< 	BidirectionalIterator i = first;
+< 	Pointer j = buffer;
+< 	len2 = 0;
+< 	while (len2 < len1 && len2 < fill_pointer) {
+< 	    *buffer++ = *first++;
+< 	    ++len2;
+< 	}
+< 	raw_storage_iterator<Pointer, T> end_buffer = buffer;
+< 	while (len2++ < len1) {
+< 	    *end_buffer++ = *first++;
+< 	    ++fill_pointer;
+< 	}
+< 	merge(j, j + len1, middle, last, i, comp);
+---
+> 	Pointer end_buffer = copy(first, middle, buffer);
+> 	merge(buffer, end_buffer, middle, last, first, comp);
+2036,2048c1849,1850
+< 	BidirectionalIterator i = middle;
+< 	Pointer j = buffer;
+< 	len1 = 0;
+< 	while (len1 < len2 && len1 < fill_pointer) {
+< 	    *buffer++ = *middle++;
+< 	    ++len1;
+< 	}
+< 	raw_storage_iterator<Pointer, T> end_buffer = buffer;
+< 	while (len1++ < len2) {
+< 	    *end_buffer++ = *middle++;
+< 	    ++fill_pointer;
+< 	}
+< 	__merge_backward(first, i, j, j + len2, last, comp);
+---
+> 	Pointer end_buffer = copy(middle, last, buffer);
+> 	__merge_backward(first, middle, buffer, end_buffer, last, comp);
+2069c1871
+< 			 buffer_size, fill_pointer, (T*)0, comp);
+---
+> 			 buffer_size, (T*)0, comp);
+2071,2072c1873
+< 			 len2 - len22, buffer, buffer_size, fill_pointer,
+< 			 (T*)0, comp);
+---
+> 			 len2 - len22, buffer, buffer_size, (T*)0, comp);
+2076c1877
+< template <class BidirectionalIterator, class Distance, class Pointer>
+---
+> template <class BidirectionalIterator, class Distance, class Pointer, class T>
+2080c1881
+< 		     pair<Pointer, Distance> p) {
+---
+> 		     pair<Pointer, Distance> p, T*) {
+2085,2088c1886,1889
+<     Distance fill_pointer = 0;
+<     __merge_adaptive(first, middle, last, len1, len2, p.first, p.second,
+< 		     fill_pointer, value_type(first)); 
+<     destroy(p.first, p.first + fill_pointer);
+---
+>     Distance len = min(p.second, len1 + len2);
+>     fill_n(raw_storage_iterator<Pointer, T>(p.first), len, *first);
+>     __merge_adaptive(first, middle, last, len1, len2, p.first, p.second, (T*)0);
+>     destroy(p.first, p.first + len);
+2092c1893
+< template <class BidirectionalIterator, class Distance, class Pointer, 
+---
+> template <class BidirectionalIterator, class Distance, class Pointer, class T,
+2097c1898
+< 		     pair<Pointer, Distance> p, Compare comp) {
+---
+> 		     pair<Pointer, Distance> p, T*, Compare comp) {
+2102,2105c1903,1907
+<     Distance fill_pointer = 0;
+<     __merge_adaptive(first, middle, last, len1, len2, p.first, p.second,
+< 		     fill_pointer, value_type(first), comp); 
+<     destroy(p.first, p.first + fill_pointer);
+---
+>     Distance len = min(p.second, len1 + len2);
+>     fill_n(raw_storage_iterator<Pointer, T>(p.first), len, *first);
+>     __merge_adaptive(first, middle, last, len1, len2, p.first, p.second, (T*)0,
+> 		     comp); 
+>     destroy(p.first, p.first + len);
+2109c1911
+< template <class BidirectionalIterator, class Distance>
+---
+> template <class BidirectionalIterator, class T, class Distance>
+2112c1914
+< 				BidirectionalIterator last, Distance*) {
+---
+> 				BidirectionalIterator last, T*, Distance*) {
+2118c1920
+< 		    get_temporary_buffer(len1 + len2, value_type(first)));
+---
+> 		    get_temporary_buffer(len1 + len2, (T*)0), (T*)0);
+2121c1923
+< template <class BidirectionalIterator, class Distance, class Compare>
+---
+> template <class BidirectionalIterator, class T, class Distance, class Compare>
+2124c1926
+< 				BidirectionalIterator last, Distance*,
+---
+> 				BidirectionalIterator last, T*, Distance*,
+2131c1933
+< 		    get_temporary_buffer(len1 + len2, value_type(first)),
+---
+> 		    get_temporary_buffer(len1 + len2, (T*)0), (T*)0,
+2139c1941,1943
+<     __inplace_merge_aux(first, middle, last, distance_type(first));
+---
+>     if (first == middle || middle == last) return;
+>     __inplace_merge_aux(first, middle, last, value_type(first),
+> 			distance_type(first));
+2146c1950,1952
+<     __inplace_merge_aux(first, middle, last, distance_type(first), comp);
+---
+>     if (first == middle || middle == last) return;
+>     __inplace_merge_aux(first, middle, last, value_type(first),
+> 			distance_type(first), comp);
+2313,2314c2119,2120
+< template <class InputIterator>
+< InputIterator max_element(InputIterator first, InputIterator last) {
+---
+> template <class ForwardIterator>
+> ForwardIterator max_element(ForwardIterator first, ForwardIterator last) {
+2316c2122
+<     InputIterator result = first;
+---
+>     ForwardIterator result = first;
+2322,2324c2128,2130
+< template <class InputIterator, class Compare>
+< InputIterator max_element(InputIterator first, InputIterator last,
+< 			  Compare comp) {
+---
+> template <class ForwardIterator, class Compare>
+> ForwardIterator max_element(ForwardIterator first, ForwardIterator last,
+> 			    Compare comp) {
+2326c2132
+<     InputIterator result = first;
+---
+>     ForwardIterator result = first;
+2332,2333c2138,2139
+< template <class InputIterator>
+< InputIterator min_element(InputIterator first, InputIterator last) {
+---
+> template <class ForwardIterator>
+> ForwardIterator min_element(ForwardIterator first, ForwardIterator last) {
+2335c2141
+<     InputIterator result = first;
+---
+>     ForwardIterator result = first;
+2341,2343c2147,2149
+< template <class InputIterator, class Compare>
+< InputIterator min_element(InputIterator first, InputIterator last,
+< 			  Compare comp) {
+---
+> template <class ForwardIterator, class Compare>
+> ForwardIterator min_element(ForwardIterator first, ForwardIterator last,
+> 			    Compare comp) {
+2345c2151
+<     InputIterator result = first;
+---
+>     ForwardIterator result = first;
+
+=== diff old/algobase.h new/algobase.h
+
+82c82
+<     n = last - first;
+---
+>     n += last - first;
+124c124
+< 	destroy(first);
+---
+> 	destroy(&*first);
+126c126
+< 	//destroy(first++);
+---
+> 	//destroy(&*first++);
+133c133
+<     while (first != last) construct(result++, *first++);
+---
+>     while (first != last) construct(&*result++, *first++);
+140c140
+<     while (first != last) construct(first++, x);
+---
+>     while (first != last) construct(&*first++, x);
+146c146
+<     while (n--) construct(first++, x);
+---
+>     while (n--) construct(&*first++, x);
+
+=== diff old/deque.h new/deque.h
+
+264a265
+> 	if (end().current == end().last) allocate_at_end();
+267,268c268
+< 	if (empty() || end().current == end().last)
+< 	    allocate_at_end();
+---
+> 	if (empty()) allocate_at_end();
+271a272
+> 	if (end().current == end().last) allocate_at_end();
+280a282
+> 	if (end().current == end().first) deallocate_at_end();
+284,285c286
+< 	if (empty() || end().current == end().first)
+< 	    deallocate_at_end();
+---
+> 	if (empty()) deallocate_at_end();
+410a412,413
+> 	if (finish.current == finish.first) 
+> 	    data_allocator.deallocate(*start.node);
+
+=== diff old/function.h new/function.h
+
+21,22c21,22
+< template <class T>
+< inline bool operator!=(const T& x, const T& y) {
+---
+> template <class T1, class T2>
+> inline bool operator!=(const T1& x, const T2& y) {
+26,27c26,27
+< template <class T>
+< inline bool operator>(const T& x, const T& y) {
+---
+> template <class T1, class T2>
+> inline bool operator>(const T1& x, const T2& y) {
+31,32c31,32
+< template <class T>
+< inline bool operator<=(const T& x, const T& y) {
+---
+> template <class T1, class T2>
+> inline bool operator<=(const T1& x, const T2& y) {
+36,37c36,37
+< template <class T>
+< inline bool operator>=(const T& x, const T& y) {
+---
+> template <class T1, class T2>
+> inline bool operator>=(const T1& x, const T2& y) {
+244a245
+>     pointer_to_unary_function() {}
+258a260
+>     pointer_to_binary_function() {}
+
+=== diff old/list.h new/list.h
+
+459c459,461
+<     while(fill--) merge(counter[fill]);
+---
+> 
+>     for (int i = 1; i < fill; ++i) counter[i].merge(counter[i-1]);
+>     swap(counter[fill-1]);
+
+=== diff old/pair.h new/pair.h
+
+24a25
+>     pair() {}
+
+=== diff old/random.cpp new/random.cpp
+
+54c54
+< __random_generator rd(__SEED);
+---
+> static __random_generator rd(__SEED);
