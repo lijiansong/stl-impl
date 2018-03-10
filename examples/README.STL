@@ -1,0 +1,147 @@
+Introducing STL<ToolKit> and Systems<ToolKit>
+---------------------------------------------
+
+ObjectSpace, Inc. is proud to introduce STL<ToolKit>, the only complete ANSI
+implementation of STL that runs on all of the common platform/compiler
+combinations, including cfront, gnu, Visual C++ 2.0, Borland 4.5, and C Set++.
+
+STL<ToolKit> is also the EASIEST STL to use, including many addition algorithms
+for hassle-free programming. STL<ToolKit> includes a 360 page book 
+chock-a-block with tutorials, examples, and a full class/algorithm catalog.
+
+STL<ToolKit> is currently available for a special introductory offer of just
+$149. Attractive site license fees are negotiable.
+
+Here's a list of STL<ToolKit> features. Compare them against the other 
+STL implementations:
+
+
+                                         ObjectSpace    Modena    HP ShareWare
+                                         -----------    ------    ------------
+
+Full standard implementation                   YES       YES       YES
+Can always store pointers to objects(1)        YES       NO        NO
+Dynamic allocators(2)                          YES       NO        NO
+Careful to factor our non-template code(3)     YES       NO        NO
+Has name clash avoidance(4)                    YES       NO        NO
+Available for CFRONT compilers                 YES       NO        NO
+Available for Microsoft Visual C++             YES       NO        NO
+Available for Borland C++                      YES       YES       YES
+Available for C Set++                          YES       YES       NO
+Available for GNU                              YES       NO        NO
+Available for all SUN compilers                YES       NO        NO
+Available for all HP compilers                 YES       NO        NO
+Available for Centerline's compiler            YES       NO        NO
+Multi-thread safe(5)                           YES       YES       NO
+Multi-thread object locking(6)                 YES       NO        NO
+Cross-platform multi-thread classes(7)         YES       NO        NO
+Additional function objects & algorithms(8)    YES       NO        NO
+Auto-compiler configuration(9)                 YES       NO        NO
+Example source code files                      250+      7         0
+Extensive user guide(10)                       YES       YES       NO
+Ships will full source code                    YES       YES       YES
+No royalties                                   YES       YES       YES
+
+
+
+Notes:
+
+1. STL<ToolKit> is the only implementation that does not require 
+   state-of-the-art compiler support
+
+2. allows allocators to be assigned on a per-object basis, allowing STL
+   objects to be stored in OODBs
+
+3. other implementations have huge non-factored template code for the
+   associative containers.
+
+4. allows you to switch between standard and non-standard container names
+
+5. protects underlying support structures
+
+6. allows any kind of object to be read and/or write locked in a 
+   multi-threaded environment
+
+7. includes functions for comparing objects via their pointers, comparing
+   strings, and easy-to-use container-related algorithms
+
+8. includes mutex, monitor, thread, and auto-locking objects
+
+9. analyzes which parts of your compiler don't work correctly
+
+10. also to be published in a different format by Prentice-Hall
+
+
+
+ObjectSpace, Inc. is also proud to introduce Systems<ToolKit>, the only 
+cross-platform development toolkit that is seamlessly integrated with the
+new ANSI standard Standard Template Library (STL) and new ANSI string.
+
+Systems<ToolKit> is a second-generation C++ library that was designed and
+implemented using state-of-the art techniques. As a result, most classes may
+be used standalone or in conjunction with other vendor's class libraries.
+
+Here is a list of the Systems<ToolKit> component:
+
+STL
+  full ANSI standard
+  dynamic allocators
+  multi-thread enabled
+
+Threads
+  thread
+  mutex
+  object read/write locking
+  semaphore
+
+Sockets
+  udp, tcp
+  serice, network, and host databases
+
+Object Streaming
+  full persistence
+  allows objects to be sent easily between machines via IPC
+  full morphology
+  works with template classes & STL
+  easy to add to your own objects
+
+Pipes
+  Named pipe
+  Unnamed pipe
+
+Utilities
+  64-bit Time, Date
+  ANSI string
+  Tokenizer
+
+Processes
+  processes
+  signals & handlers
+  resource usage
+  timers
+
+Files
+  files
+  directories
+  locks
+
+Shared Memory
+
+I/O services
+  I/O multiplexor
+
+Events
+  event logging, streaming
+  filters
+  handlers
+
+Security
+  users, groups, login database
+
+Storage allocators
+  allows you to efficiently allocate storage from any medium, such as
+  shared memory, heap, files, etc.
+
+
+For more information about either of these toolkits, send email to
+info@objectspace.com or call 1-800-OBJECT-1.

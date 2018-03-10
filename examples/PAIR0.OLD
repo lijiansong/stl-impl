@@ -1,0 +1,12 @@
+#include <stl.h>
+#include <iostream.h>
+
+int array1 [] = { 1, 4, 8, 3, 2 };
+int array2 [] = { 1, 4, 7, 2, 3 };
+
+int main ()
+{
+  pair<int*, int*> p = mismatch (array1, array1 + 5, array2);
+  cout << "mismatch at " << *(p.first) << ", " << *(p.second) << endl;
+  return 0;
+}

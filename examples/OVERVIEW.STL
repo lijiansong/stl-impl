@@ -1,0 +1,226 @@
+Introduction to STL
+-------------------
+
+by Graham Glass,
+ObjectSpace, Inc.
+gglass@objectspace.com
+
+
+Almost all programmers who write C++ programs have to write or purchase a set 
+of data structure classes such as vectors, lists, and sets. Up until now, 
+every commercial offering has had one or more of the following drawbacks:
+
+
+* Since there was no ANSI standard for collection classes, every vendor∆s 
+  collection classes were incompatible. It was therefore very difficult to 
+  decide how to return a collection of results from an object, since one user 
+  of an object might be using collections from vendor A, and another user 
+  might be using collections from vendor B.
+ 
+* Many collection hierarchies made use of inheritance and virtual functions, 
+  which tended to reduce their performance. Although in many cases this is not 
+  a problem, many programmers will not use libraries unless they perform 
+  within a few percentage points of hand-coded C equivalents. Use of virtual 
+  functions also makes objects difficult to instantiate in shared memory, 
+  which is a useful thing to be able to do.
+ 
+* Every vendor∆s collection classes placed the code for algorithms that worked 
+  on the collections within the collection classes themselves. For example, 
+  code for sorting often ended up in a collection called "SortedCollection", 
+  and code for applying a function to every element in a collection often 
+  ended up in an abstract base class called "Collection". This approach made 
+  it hard to add new algorithms without editing and recompiling the 
+  vendor∆s source code, which for maintenance reasons is usually best to avoid.
+ 
+* Several of the original collection classes were not type-safe. Use of these 
+  collections require heavy use of casting, which goes against one of the main 
+  spirits of C++ - static type checking.
+ 
+* All of the commercially available collection classes had their memory 
+  allocation policies woven deeply into the code of the containers. This meant 
+  that if you wanted to allocate space for a collection from shared memory 
+  instead of from the heap, you couldn∆t.
+
+
+In response to this situation, the ANSI standards committee decided to search 
+for a standard set of collection classes that would overcome these 
+difficulties. Alex Stepanov and Meng Lee of the Hewlett Packard Laboratories 
+proposed STL as the standard, based on their successful work into the area of 
+generic programming. In July of 1994, STL was chosen as the ANSI/ISO standard 
+because of the following reasons:
+
+
+
+* STL is very efficient. The implementations of STL container classes are lean 
+  and mean, using no inheritance and no virtual functions. STL is type-safe 
+  throughout due to its extensive use of C++ template features. STL includes a 
+  wide variety of container classes, including vectors, lists, deques, sets, 
+  multisets, maps, multimaps, bit vectors, stacks, queues, and priority queues.
+  Here∆s an example that illustrates the use of a simple vector.
+
+code:
+
+  #include <stl.h>
+  
+  int main ()
+  {
+    vector<int> v; // Create empty vector of ints.
+    v.push_back (42); // Append an int.
+    v.push_back (1); // Append another int.
+    cout << "v.size () = " << v.size () << endl; // Display size.
+    return 0; // Done.
+  }
+
+output: 
+
+  v.size () = 2
+
+
+ 
+* STL iterators allow you to access the contents of any STL container in the 
+  same way that you can access and iterate through regular "C" arrays. STL 
+  includes many kinds of iterators, including random access iterators, reverse 
+  iterators, and iostream iterators. Here's an example that illustrates the 
+  similarity between STL iterators and regular "C" pointers:
+
+code:
+ 
+  #include <stl.h>
+  
+  int array [] = { 1, 42, 3 }; // Regular ÙCˆ array.
+  vector<int> v; // STL vector of integers.
+  
+  int main ()
+  {
+    int* p1; // Use pointer as iterator.
+    // Iterate through regular "C" array.
+    for (p1 = array; p1 != array + 3; p1++)
+      cout << "array has " << *p1 << endl;
+    v.push_back (1);
+    v.push_back (42);
+    v.push_back (3);
+    vector<int>::iterator p2; // Declare iterator.
+    // Iterate through STL container.
+    for (p2 = v.begin (); p2 != v.end (); v++)
+      cout << "vector has " << *p2 << endl;;
+    return 0;
+  }
+
+output:
+
+  array has 1
+  array has 42
+  array has 3
+  vector has 1
+  vector has 42
+  vector has 3
+
+
+
+* STL algorithms are not member functions of its container classes, and do not 
+  access STL containers directly. Instead, they are stand-alone functions that 
+  operate upon data via the use of iterators. This indirect approach allows 
+  algorithms to work with regular "C" arrays as well as the STL containers. In 
+  addition, it allows the library to be extended without modifying the source 
+  code of the containers. STL  contains over 70 algorithms. Here's an 
+  example that uses the sort() algorithm to sort both a regular "C" array and
+  an STL vector:
+
+code:
+ 
+  #include <stl.h>
+  
+  int array [] = { 1, 42, 3 };
+  vector<int> v;
+  
+  int main ()
+  {
+    sort (array, array + 3); // Supply start & "past-the-end" ptrs.
+    int* p1; // Use pointer as iterator.
+    for (p1 = array; p1 != array+3; p1++) // Display result.
+      cout << "array has " << *p1 << endl;
+    v.push_back (1); // Add some items to the STL vector.
+    v.push_back (42);
+    v.push_back (3);
+    sort (v.begin (), v.end ()); // Supply start & "past-the-end" ptrs
+    vector<int>::iterator p2; // Declare iterator.
+    for (p2 = v.begin (); p2 != v.end (); p2++) // Display result.
+      cout << "vector has " << *p2 << endl;
+    return 0;
+  }
+
+output:
+
+  array has 1
+  array has 3
+  array has 42
+  vector has 1
+  vector has 3
+  vector has 42
+
+
+ 
+* STL function objects allow functions to be encapsulated and associated with 
+  data. They also allow functions to be created, stored, and destroyed just 
+  like any other kind of object. Many STL containers and algorithms use 
+  function objects to perform their duties. STL contains over 30 function 
+  objects. Here's an example that uses a less function object to 
+  order an STL set:
+
+code:
+ 
+  #include <stl.h>
+  
+  int main ()
+  {
+    set<int, less<int> > s; // Order set using "less" function object.
+    s.insert (1);
+    s.insert (42);
+    s.insert (3);
+    set<int, less<int> >::iterator p;
+    for (p = s.begin (); p != s.end (); p++) // Display contents.
+      cout << *p << endl;
+    return 0;
+  }
+
+output:
+
+  1
+  3
+  42
+
+
+
+* In order to accommodate varying mechanisms for memory allocation, STL does 
+  not explicitly use the standard new() and delete() operators anywhere in the 
+  library. Instead, all STL containers use special objects called allocators 
+  to allocate and deallocate storage. Programmers can replace the standard 
+  allocator objects with their own, thus modifying the container∆s memory 
+  allocation policies. For example, you could add a custom allocator that 
+  grabs storage from an object-oriented database instead of from the heap. 
+  Here's an example that shows how custom allocators may be used:
+
+
+code:
+
+  #include <stl.h>
+  
+  int main ()
+  {
+    vector<int> v1; // By default, allocate storage from local heap.
+    my_allocator alloc; // User-defined allocator.
+    vector<int> v2 (alloc); // Allocate storage from custom allocator.
+    .....
+  }
+
+
+
+Now that STL has become an accepted standard, it is very likely that class 
+libraries of the future will adopt STL as the preferred way to represent 
+collections of objects. 
+
+ObjectSpace, Inc. is proud to announce STL<ToolKit>, the EASIEST to use STL 
+that works on most platform/compiler combinations (including cfront, Borland, 
+Visual C++, C Set++, ObjectCenter, and the latest Sun & HP compilers).
+Read the README.STL file in this directory for more information, or send 
+email to info@objectspace.com.
