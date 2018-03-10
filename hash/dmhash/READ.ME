@@ -1,0 +1,27 @@
+This collection of files is a preliminary distribution of an
+implementation of hash tables that conforms to the requirements
+proposed in "Hash Tables for the Standard Template Library," by Javier
+Barreiro, Robert Fraley and David R. Musser.  The files are:
+
+ hashimp2.ps	paper describing implementation (postscript)
+ hash1.C	sample program that uses a hash_set
+ hashset.h	hash_set
+ hashmset.h 	hash_multiset
+ hashmap.h 	hash_map
+ hashmmap.h 	hash_multimap
+ hashtbl.h 	hash_table (base facilities for above four classes)
+ hashfun.h 	sample hash functions
+ slist.h	singly-linked lists (incomplete, and will be revised)
+
+This implementation has been tested mainly by storing and retrieving
+words from dictionaries of various sizes, but it is still experimental
+and subject to change.  It still contains some code whose only purpose
+is for debugging and which will be removed in a later version.  One
+operation required by the proposed standard, resize, for explicit
+resizing of the table, is not yet implemented (it does nothing).
+However, this implementation does automatic gradual resizing.  See
+hashimp2.ps for details and references to related documents.
+
+Javier Barreiro and David Musser	
+Rensselaer Polytechnic Institute
+musser@cs.rpi.edu

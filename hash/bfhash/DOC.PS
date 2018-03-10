@@ -1,0 +1,5070 @@
+%!PS-Adobe-3.0
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%PageOrder: (atend)
+%%DocumentFonts: (atend)
+%%Creator: Frame 4.0
+%%DocumentData: Clean7Bit
+%%EndComments
+%%BeginProlog
+%
+% Frame ps_prolog 4.0, for use with Frame 4.0 products
+% This ps_prolog file is Copyright (c) 1986-1993 Frame Technology
+% Corporation.  All rights reserved.  This ps_prolog file may be
+% freely copied and distributed in conjunction with documents created
+% using FrameMaker, FrameBuilder and FrameViewer as long as this 
+% copyright notice is preserved.
+%
+% Frame products normally print colors as their true color on a color printer
+% or as shades of gray, based on luminance, on a black-and white printer. The
+% following flag, if set to True, forces all non-white colors to print as pure
+% black. This has no effect on bitmap images.
+/FMPrintAllColorsAsBlack             false def
+%
+% Frame products can either set their own line screens or use a printer's 
+% default settings. Three flags below control this separately for no 
+% separations, spot separations and process separations. If a flag
+% is true, then the default printer settings will not be changed. If it is
+% false, Frame products will use their own settings from a table based on
+% the printer's resolution.
+/FMUseDefaultNoSeparationScreen      true  def
+/FMUseDefaultSpotSeparationScreen    true  def
+/FMUseDefaultProcessSeparationScreen false def
+%
+% For any given PostScript printer resolution, Frame products have two sets of 
+% screen angles and frequencies for printing process separations, which are 
+% recomended by Adobe. The following variable chooses the higher frequencies
+% when set to true or the lower frequencies when set to false. This is only
+% effective if the appropriate FMUseDefault...SeparationScreen flag is false.
+/FMUseHighFrequencyScreens true def
+%
+% PostScript Level 2 printers contain an "Accurate Screens" feature which can
+% improve process separation rendering at the expense of compute time. This 
+% flag is ignored by PostScript Level 1 printers.
+/FMUseAcccurateScreens true def
+%
+% The following PostScript procedure defines the spot function that Frame
+% products will use for process separations. You may un-comment-out one of
+% the alternative functions below, or use your own.
+%
+% Dot function
+/FMSpotFunction {abs exch abs 2 copy add 1 gt 
+		{1 sub dup mul exch 1 sub dup mul add 1 sub }
+		{dup mul exch dup mul add 1 exch sub }ifelse } def
+%
+% Line function
+% /FMSpotFunction { pop } def
+%
+% Elipse function
+% /FMSpotFunction { dup 5 mul 8 div mul exch dup mul exch add 
+%		sqrt 1 exch sub } def
+%
+%
+/FMversion (4.0) def 
+/FMLevel1 /languagelevel where {pop languagelevel} {1} ifelse 2 lt def
+/FMPColor
+	FMLevel1 {
+		false
+		/colorimage where {pop pop true} if
+	} {
+		true
+	} ifelse
+def
+/FrameDict 400 dict def 
+systemdict /errordict known not {/errordict 10 dict def
+		errordict /rangecheck {stop} put} if
+% The readline in PS 23.0 doesn't recognize cr's as nl's on AppleTalk
+FrameDict /tmprangecheck errordict /rangecheck get put 
+errordict /rangecheck {FrameDict /bug true put} put 
+FrameDict /bug false put 
+mark 
+% Some PS machines read past the CR, so keep the following 3 lines together!
+currentfile 5 string readline
+00
+0000000000
+cleartomark 
+errordict /rangecheck FrameDict /tmprangecheck get put 
+FrameDict /bug get { 
+	/readline {
+		/gstring exch def
+		/gfile exch def
+		/gindex 0 def
+		{
+			gfile read pop 
+			dup 10 eq {exit} if 
+			dup 13 eq {exit} if 
+			gstring exch gindex exch put 
+			/gindex gindex 1 add def 
+		} loop
+		pop 
+		gstring 0 gindex getinterval true 
+		} bind def
+	} if
+/FMshowpage /showpage load def
+/FMquit /quit load def
+/FMFAILURE { 
+	dup = flush 
+	FMshowpage 
+	/Helvetica findfont 12 scalefont setfont
+	72 200 moveto
+	show FMshowpage 
+	FMquit 
+	} def 
+/FMVERSION {
+	FMversion ne {
+		(Frame product version does not match ps_prolog!) FMFAILURE
+		} if
+	} def 
+/FMBADEPSF { 
+	(PostScript Lang. Ref. Man., 2nd Ed., H.2.4 says EPS must not call X              )
+	dup dup (X) search pop exch pop exch pop length 
+	4 -1 roll 
+	putinterval 
+	FMFAILURE
+	} def
+/FMLOCAL {
+	FrameDict begin
+	0 def 
+	end 
+	} def 
+/concatprocs
+	{
+	/proc2 exch cvlit def/proc1 exch cvlit def/newproc proc1 length proc2 length add array def
+	newproc 0 proc1 putinterval newproc proc1 length proc2 putinterval newproc cvx
+}def
+FrameDict begin 
+/FMnone 0 def
+/FMcyan 1 def
+/FMmagenta 2 def
+/FMyellow 3 def
+/FMblack 4 def
+/FMcustom 5 def
+/FrameNegative false def 
+/FrameSepIs FMnone def 
+/FrameSepBlack 0 def
+/FrameSepYellow 0 def
+/FrameSepMagenta 0 def
+/FrameSepCyan 0 def
+/FrameSepRed 1 def
+/FrameSepGreen 1 def
+/FrameSepBlue 1 def
+/FrameCurGray 1 def
+/FrameCurPat null def
+/FrameCurColors [ 0 0 0 1 0 0 0 ] def 
+/FrameColorEpsilon .001 def	
+/eqepsilon {		
+	sub dup 0 lt {neg} if
+	FrameColorEpsilon le
+} bind def
+/FrameCmpColorsCMYK { 
+	2 copy 0 get exch 0 get eqepsilon {
+		2 copy 1 get exch 1 get eqepsilon {
+			2 copy 2 get exch 2 get eqepsilon {
+				3 get exch 3 get eqepsilon
+			} {pop pop false} ifelse
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+/FrameCmpColorsRGB { 
+	2 copy 4 get exch 0 get eqepsilon {
+		2 copy 5 get exch 1 get eqepsilon {
+			6 get exch 2 get eqepsilon
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+/RGBtoCMYK { 
+	1 exch sub 
+	3 1 roll 
+	1 exch sub 
+	3 1 roll 
+	1 exch sub 
+	3 1 roll 
+	3 copy 
+	2 copy 
+	le { pop } { exch pop } ifelse 
+	2 copy 
+	le { pop } { exch pop } ifelse 
+	dup dup dup 
+	6 1 roll 
+	4 1 roll 
+	7 1 roll 
+	sub 
+	6 1 roll 
+	sub 
+	5 1 roll 
+	sub 
+	4 1 roll 
+} bind def
+/CMYKtoRGB { 
+	dup dup 4 -1 roll add 						  
+	5 1 roll 3 -1 roll add 						  
+	4 1 roll add 								  
+	1 exch sub dup 0 lt {pop 0} if 3 1 roll 	  
+	1 exch sub dup 0 lt {pop 0} if exch 	      
+	1 exch sub dup 0 lt {pop 0} if exch	  		  
+} bind def
+/FrameSepInit {
+	1.0 RealSetgray
+} bind def
+/FrameSetSepColor { 
+	/FrameSepBlue exch def
+	/FrameSepGreen exch def
+	/FrameSepRed exch def
+	/FrameSepBlack exch def
+	/FrameSepYellow exch def
+	/FrameSepMagenta exch def
+	/FrameSepCyan exch def
+	/FrameSepIs FMcustom def
+	setCurrentScreen	
+} bind def
+/FrameSetCyan {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 1.0 def
+	/FrameSepIs FMcyan def
+	setCurrentScreen	
+} bind def
+ 
+/FrameSetMagenta {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 1.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMmagenta def
+	setCurrentScreen
+} bind def
+ 
+/FrameSetYellow {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 1.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMyellow def
+	setCurrentScreen
+} bind def
+ 
+/FrameSetBlack {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 1.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMblack def
+	setCurrentScreen
+} bind def
+ 
+/FrameNoSep { 
+	/FrameSepIs FMnone def
+	setCurrentScreen
+} bind def
+/FrameSetSepColors { 
+	FrameDict begin
+	[ exch 1 add 1 roll ]
+	/FrameSepColors  
+	exch def end
+	} bind def
+/FrameColorInSepListCMYK { 
+	FrameSepColors {  
+       		exch dup 3 -1 roll 
+       		FrameCmpColorsCMYK 
+       		{ pop true exit } if
+    	} forall 
+	dup true ne {pop false} if
+	} bind def
+/FrameColorInSepListRGB { 
+	FrameSepColors {  
+       		exch dup 3 -1 roll 
+       		FrameCmpColorsRGB 
+       		{ pop true exit } if
+    	} forall 
+	dup true ne {pop false} if
+	} bind def
+/RealSetgray /setgray load def
+/RealSetrgbcolor /setrgbcolor load def
+/RealSethsbcolor /sethsbcolor load def
+end 
+/setgray { 
+	FrameDict begin
+	FrameSepIs FMnone eq
+		{ RealSetgray } 
+		{ 
+		FrameSepIs FMblack eq 
+			{ RealSetgray } 
+			{ FrameSepIs FMcustom eq 
+			  FrameSepRed 0 eq and
+			  FrameSepGreen 0 eq and
+			  FrameSepBlue 0 eq and {
+			  	RealSetgray
+			  } {
+				1 RealSetgray pop 
+			  } ifelse
+			} ifelse
+		} ifelse
+	end
+} bind def
+/setrgbcolor { 
+	FrameDict begin
+	FrameSepIs FMnone eq
+	{  RealSetrgbcolor }
+	{
+		3 copy [ 4 1 roll ] 
+		FrameColorInSepListRGB
+		{
+				FrameSepBlue eq exch 
+			 	FrameSepGreen eq and exch 
+			 	FrameSepRed eq and
+			 	{ 0 } { 1 } ifelse
+		}
+		{
+			FMPColor {
+				RealSetrgbcolor
+				currentcmykcolor
+			} {
+				RGBtoCMYK
+			} ifelse
+			FrameSepIs FMblack eq
+			{1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		RealSetgray
+	} 
+	ifelse
+	end
+} bind def
+/sethsbcolor {
+	FrameDict begin
+	FrameSepIs FMnone eq 
+	{ RealSethsbcolor } 
+	{
+		RealSethsbcolor 
+		currentrgbcolor  
+		setrgbcolor 
+	} 
+	ifelse
+	end
+} bind def
+FrameDict begin
+/setcmykcolor where {
+	pop /RealSetcmykcolor /setcmykcolor load def
+} {
+	/RealSetcmykcolor {
+		4 1 roll
+		3 { 3 index add 0 max 1 min 1 exch sub 3 1 roll} repeat 
+		setrgbcolor pop
+	} bind def
+} ifelse
+userdict /setcmykcolor { 
+		FrameDict begin
+		FrameSepIs FMnone eq
+		{ RealSetcmykcolor } 
+		{
+			4 copy [ 5 1 roll ]
+			FrameColorInSepListCMYK
+			{
+				FrameSepBlack eq exch 
+				FrameSepYellow eq and exch 
+				FrameSepMagenta eq and exch 
+				FrameSepCyan eq and 
+				{ 0 } { 1 } ifelse
+			}
+			{
+				FrameSepIs FMblack eq
+				{1.0 exch sub 4 1 roll pop pop pop} {
+				FrameSepIs FMyellow eq
+				{pop 1.0 exch sub 3 1 roll pop pop} {
+				FrameSepIs FMmagenta eq
+				{pop pop 1.0 exch sub exch pop } {
+				FrameSepIs FMcyan eq
+				{pop pop pop 1.0 exch sub } 
+				{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+			} ifelse
+			RealSetgray
+		}
+		ifelse
+		end
+	} bind put
+FMLevel1 not { 
+	
+	/patProcDict 5 dict dup begin
+		<0f1e3c78f0e1c387> { 3 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<0f87c3e1f0783c1e> { 3 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+		<8142241818244281> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke
+											-1 -1 moveto 9 9 lineto stroke } bind def
+		<03060c183060c081> { 1 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<8040201008040201> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+	end def
+	/patDict 15 dict dup begin
+		/PatternType 1 def		
+		/PaintType 2 def		
+		/TilingType 3 def		
+		/BBox [ 0 0 8 8 ] def 	
+		/XStep 8 def			
+		/YStep 8 def			
+		/PaintProc {
+			begin
+			patProcDict bstring known {
+				patProcDict bstring get exec
+			} {
+				8 8 true [1 0 0 -1 0 8] bstring imagemask
+			} ifelse
+			end
+		} bind def
+	end def
+} if
+/combineColor {
+    FrameSepIs FMnone eq
+	{
+		graymode FMLevel1 or not {
+			
+			[/Pattern [/DeviceCMYK]] setcolorspace
+			FrameCurColors 0 4 getinterval aload pop FrameCurPat setcolor
+		} {
+			FrameCurColors 3 get 1.0 ge {
+				FrameCurGray RealSetgray
+			} {
+				FMPColor graymode and {
+					0 1 3 { 
+						FrameCurColors exch get
+						1 FrameCurGray sub mul
+					} for
+					RealSetcmykcolor
+				} {
+					4 1 6 {
+						FrameCurColors exch get
+						graymode {
+							1 exch sub 1 FrameCurGray sub mul 1 exch sub
+						} {
+							1.0 lt {FrameCurGray} {1} ifelse
+						} ifelse
+					} for
+					RealSetrgbcolor
+				} ifelse
+			} ifelse
+		} ifelse
+	} { 
+		FrameCurColors 0 4 getinterval aload
+		FrameColorInSepListCMYK {
+			FrameSepBlack eq exch 
+			FrameSepYellow eq and exch 
+			FrameSepMagenta eq and exch 
+			FrameSepCyan eq and
+			FrameSepIs FMcustom eq and
+			{ FrameCurGray } { 1 } ifelse
+		} {
+			FrameSepIs FMblack eq
+			{FrameCurGray 1.0 exch sub mul 1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop FrameCurGray 1.0 exch sub mul 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		graymode FMLevel1 or not {
+			
+			[/Pattern [/DeviceGray]] setcolorspace
+			FrameCurPat setcolor
+		} { 
+			graymode not FMLevel1 and {
+				
+				dup 1 lt {pop FrameCurGray} if
+			} if
+			RealSetgray
+		} ifelse
+	} ifelse
+} bind def
+/savematrix {
+	orgmatrix currentmatrix pop
+	} bind def
+/restorematrix {
+	orgmatrix setmatrix
+	} bind def
+/dmatrix matrix def
+/dpi    72 0 dmatrix defaultmatrix dtransform
+    dup mul exch   dup mul add   sqrt def
+	
+/freq dpi dup 72 div round dup 0 eq {pop 1} if 8 mul div def
+/sangle 1 0 dmatrix defaultmatrix dtransform exch atan def
+/dpiranges   [  2540    2400    1693     1270    1200     635      600      0      ] def
+/CMLowFreqs  [ 100.402  94.8683 89.2289 100.402  94.8683  66.9349  63.2456 47.4342 ] def
+/YLowFreqs   [  95.25   90.0    84.65    95.25   90.0     70.5556  66.6667 50.0    ] def
+/KLowFreqs   [  89.8026 84.8528 79.8088  89.8026 84.8528  74.8355  70.7107 53.033  ] def
+/CLowAngles  [  71.5651 71.5651 71.5651 71.5651  71.5651  71.5651  71.5651 71.5651 ] def
+/MLowAngles  [  18.4349 18.4349 18.4349 18.4349  18.4349  18.4349  18.4349 18.4349 ] def
+/YLowTDot    [  true    true    false    true    true     false    false   false   ] def
+/CMHighFreqs [ 133.87  126.491 133.843  108.503 102.523  100.402   94.8683 63.2456 ] def
+/YHighFreqs  [ 127.0   120.0   126.975  115.455 109.091   95.25    90.0    60.0    ] def
+/KHighFreqs  [ 119.737 113.137 119.713  128.289 121.218   89.8026  84.8528 63.6395 ] def
+/CHighAngles [  71.5651 71.5651 71.5651  70.0169 70.0169  71.5651  71.5651 71.5651 ] def
+/MHighAngles [  18.4349 18.4349 18.4349  19.9831 19.9831  18.4349  18.4349 18.4349 ] def
+/YHighTDot   [  false   false   true     false   false    true     true    false   ] def
+/PatFreq     [	10.5833 10.0     9.4055  10.5833 10.0	  10.5833  10.0	   9.375   ] def
+/screenIndex {
+	0 1 dpiranges length 1 sub { dup dpiranges exch get 1 sub dpi le {exit} {pop} ifelse } for
+} bind def
+/getCyanScreen {
+	FMUseHighFrequencyScreens { CHighAngles CMHighFreqs} {CLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+/getMagentaScreen {
+	FMUseHighFrequencyScreens { MHighAngles CMHighFreqs } {MLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+/getYellowScreen {
+	FMUseHighFrequencyScreens { YHighTDot YHighFreqs} { YLowTDot YLowFreqs } ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get { 3 div
+			{2 { 1 add 2 div 3 mul dup floor sub 2 mul 1 sub exch} repeat
+			FMSpotFunction } } {/FMSpotFunction load } ifelse
+			0.0 exch
+} bind def
+/getBlackScreen  {
+	FMUseHighFrequencyScreens { KHighFreqs } { KLowFreqs } ifelse
+		screenIndex get 45.0 /FMSpotFunction load 
+} bind def
+/getSpotScreen {
+	getBlackScreen
+} bind def
+/getCompositeScreen {
+	getBlackScreen
+} bind def
+/FMSetScreen 
+	FMLevel1 { /setscreen load 
+	}{ {
+		8 dict begin
+		/HalftoneType 1 def
+		/SpotFunction exch def
+		/Angle exch def
+		/Frequency exch def
+		/AccurateScreens FMUseAcccurateScreens def
+		currentdict end sethalftone
+	} bind } ifelse
+def
+/setDefaultScreen {
+	FMPColor {
+		orgrxfer cvx orggxfer cvx orgbxfer cvx orgxfer cvx setcolortransfer
+	}
+	{
+		orgxfer cvx settransfer
+	} ifelse
+	orgfreq organgle orgproc cvx setscreen
+} bind def
+/setCurrentScreen {
+	FrameSepIs FMnone eq {
+		FMUseDefaultNoSeparationScreen {
+			setDefaultScreen
+		} {
+			getCompositeScreen FMSetScreen
+		} ifelse
+	} {
+		FrameSepIs FMcustom eq {
+			FMUseDefaultSpotSeparationScreen {
+				setDefaultScreen
+			} {
+				getSpotScreen FMSetScreen
+			} ifelse
+		} {
+			FMUseDefaultProcessSeparationScreen {
+				setDefaultScreen
+			} {
+				FrameSepIs FMcyan eq {
+					getCyanScreen FMSetScreen
+				} {
+					FrameSepIs FMmagenta eq {
+						getMagentaScreen FMSetScreen
+					} {
+						FrameSepIs FMyellow eq {
+							getYellowScreen FMSetScreen
+						} {
+							getBlackScreen FMSetScreen
+						} ifelse
+					} ifelse
+				} ifelse
+			} ifelse
+		} ifelse
+	} ifelse 
+} bind def
+end
+	/gstring FMLOCAL
+	/gfile FMLOCAL
+	/gindex FMLOCAL
+	/orgrxfer FMLOCAL
+	/orggxfer FMLOCAL
+	/orgbxfer FMLOCAL
+	/orgxfer FMLOCAL
+	/orgproc FMLOCAL
+	/orgrproc FMLOCAL
+	/orggproc FMLOCAL
+	/orgbproc FMLOCAL
+	/organgle FMLOCAL
+	/orgrangle FMLOCAL
+	/orggangle FMLOCAL
+	/orgbangle FMLOCAL
+	/orgfreq FMLOCAL
+	/orgrfreq FMLOCAL
+	/orggfreq FMLOCAL
+	/orgbfreq FMLOCAL
+	/yscale FMLOCAL
+	/xscale FMLOCAL
+	/edown FMLOCAL
+	/manualfeed FMLOCAL
+	/paperheight FMLOCAL
+	/paperwidth FMLOCAL
+/FMDOCUMENT { 
+	array /FMfonts exch def 
+	/#copies exch def
+	FrameDict begin
+	0 ne /manualfeed exch def
+	/paperheight exch def
+	/paperwidth exch def
+	0 ne /FrameNegative exch def 
+	0 ne /edown exch def 
+	/yscale exch def
+	/xscale exch def
+	FMLevel1 {
+		manualfeed {setmanualfeed} if
+		/FMdicttop countdictstack 1 add def 
+		/FMoptop count def 
+		setpapername 
+		manualfeed {true} {papersize} ifelse 
+		{manualpapersize} {false} ifelse 
+		{desperatepapersize} {false} ifelse 
+		{ (Can't select requested paper size for Frame print job!) FMFAILURE } if
+		count -1 FMoptop {pop pop} for
+		countdictstack -1 FMdicttop {pop end} for 
+		}
+		{{1 dict dup /PageSize [paperwidth paperheight]put setpagedevice}stopped
+		{ (Can't select requested paper size for Frame print job!) FMFAILURE } if
+		 {1 dict dup /ManualFeed manualfeed put setpagedevice } stopped pop }
+	ifelse 
+	
+	FMPColor {
+		currentcolorscreen
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+			cvlit /orgbproc exch def
+				  /orgbangle exch def 
+				  /orgbfreq exch def
+			cvlit /orggproc exch def
+				  /orggangle exch def 
+				  /orggfreq exch def
+			cvlit /orgrproc exch def
+				  /orgrangle exch def 
+				  /orgrfreq exch def
+			currentcolortransfer 
+			FrameNegative {
+				1 1 4 { 
+					pop { 1 exch sub } concatprocs 4 1 roll
+				} for
+				4 copy
+				setcolortransfer
+			} if
+			cvlit /orgxfer exch def
+			cvlit /orgbxfer exch def
+			cvlit /orggxfer exch def
+			cvlit /orgrxfer exch def
+	} {
+		currentscreen 
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+				  
+		currenttransfer 
+		FrameNegative {
+			{ 1 exch sub } concatprocs
+			dup settransfer
+		} if 
+		cvlit /orgxfer exch def
+	} ifelse
+	end 
+} def 
+/pagesave FMLOCAL
+/orgmatrix FMLOCAL
+/landscape FMLOCAL
+/pwid FMLOCAL
+/FMBEGINPAGE { 
+	FrameDict begin 
+	/pagesave save def
+	3.86 setmiterlimit
+	/landscape exch 0 ne def
+	landscape { 
+		90 rotate 0 exch dup /pwid exch def neg translate pop 
+	}{
+		pop /pwid exch def
+	} ifelse
+	edown { [-1 0 0 1 pwid 0] concat } if
+	0 0 moveto paperwidth 0 lineto paperwidth paperheight lineto 
+	0 paperheight lineto 0 0 lineto 1 setgray fill
+	xscale yscale scale
+	/orgmatrix matrix def
+	gsave 
+} def 
+/FMENDPAGE {
+	grestore 
+	pagesave restore
+	end 
+	showpage
+	} def 
+/FMFONTDEFINE { 
+	FrameDict begin
+	findfont 
+	ReEncode 
+	1 index exch 
+	definefont 
+	FMfonts 3 1 roll 
+	put
+	end 
+	} def 
+/FMFILLS {
+	FrameDict begin dup
+	array /fillvals exch def
+	dict /patCache exch def
+	end 
+	} def 
+/FMFILL {
+	FrameDict begin
+	 fillvals 3 1 roll put
+	end 
+	} def 
+/FMNORMALIZEGRAPHICS { 
+	newpath
+	0.0 0.0 moveto
+	1 setlinewidth
+	0 setlinecap
+	0 0 0 sethsbcolor
+	0 setgray 
+	} bind def
+	/fx FMLOCAL
+	/fy FMLOCAL
+	/fh FMLOCAL
+	/fw FMLOCAL
+	/llx FMLOCAL
+	/lly FMLOCAL
+	/urx FMLOCAL
+	/ury FMLOCAL
+/FMBEGINEPSF { 
+	end 
+	/FMEPSF save def 
+	/showpage {} def 
+% See Adobe's "PostScript Language Reference Manual, 2nd Edition", page 714.
+% "...the following operators MUST NOT be used in an EPS file:" (emphasis ours)
+	/banddevice {(banddevice) FMBADEPSF} def
+	/clear {(clear) FMBADEPSF} def
+	/cleardictstack {(cleardictstack) FMBADEPSF} def 
+	/copypage {(copypage) FMBADEPSF} def
+	/erasepage {(erasepage) FMBADEPSF} def
+	/exitserver {(exitserver) FMBADEPSF} def
+	/framedevice {(framedevice) FMBADEPSF} def
+	/grestoreall {(grestoreall) FMBADEPSF} def
+	/initclip {(initclip) FMBADEPSF} def
+	/initgraphics {(initgraphics) FMBADEPSF} def
+	/initmatrix {(initmatrix) FMBADEPSF} def
+	/quit {(quit) FMBADEPSF} def
+	/renderbands {(renderbands) FMBADEPSF} def
+	/setglobal {(setglobal) FMBADEPSF} def
+	/setpagedevice {(setpagedevice) FMBADEPSF} def
+	/setshared {(setshared) FMBADEPSF} def
+	/startjob {(startjob) FMBADEPSF} def
+	/lettertray {(lettertray) FMBADEPSF} def
+	/letter {(letter) FMBADEPSF} def
+	/lettersmall {(lettersmall) FMBADEPSF} def
+	/11x17tray {(11x17tray) FMBADEPSF} def
+	/11x17 {(11x17) FMBADEPSF} def
+	/ledgertray {(ledgertray) FMBADEPSF} def
+	/ledger {(ledger) FMBADEPSF} def
+	/legaltray {(legaltray) FMBADEPSF} def
+	/legal {(legal) FMBADEPSF} def
+	/statementtray {(statementtray) FMBADEPSF} def
+	/statement {(statement) FMBADEPSF} def
+	/executivetray {(executivetray) FMBADEPSF} def
+	/executive {(executive) FMBADEPSF} def
+	/a3tray {(a3tray) FMBADEPSF} def
+	/a3 {(a3) FMBADEPSF} def
+	/a4tray {(a4tray) FMBADEPSF} def
+	/a4 {(a4) FMBADEPSF} def
+	/a4small {(a4small) FMBADEPSF} def
+	/b4tray {(b4tray) FMBADEPSF} def
+	/b4 {(b4) FMBADEPSF} def
+	/b5tray {(b5tray) FMBADEPSF} def
+	/b5 {(b5) FMBADEPSF} def
+	FMNORMALIZEGRAPHICS 
+	[/fy /fx /fh /fw /ury /urx /lly /llx] {exch def} forall 
+	fx fw 2 div add fy fh 2 div add  translate
+	rotate
+	fw 2 div neg fh 2 div neg translate
+	fw urx llx sub div fh ury lly sub div scale 
+	llx neg lly neg translate 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count def 
+	} bind def
+/FMENDEPSF {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMEPSF restore
+	FrameDict begin 
+	} bind def
+FrameDict begin 
+/setmanualfeed {
+%%BeginFeature *ManualFeed True
+	 statusdict /manualfeed true put
+%%EndFeature
+	} bind def
+/max {2 copy lt {exch} if pop} bind def
+/min {2 copy gt {exch} if pop} bind def
+/inch {72 mul} def
+/pagedimen { 
+	paperheight sub abs 16 lt exch 
+	paperwidth sub abs 16 lt and
+	{/papername exch def} {pop} ifelse
+	} bind def
+	/papersizedict FMLOCAL
+/setpapername { 
+	/papersizedict 14 dict def 
+	papersizedict begin
+	/papername /unknown def 
+		/Letter 8.5 inch 11.0 inch pagedimen
+		/LetterSmall 7.68 inch 10.16 inch pagedimen
+		/Tabloid 11.0 inch 17.0 inch pagedimen
+		/Ledger 17.0 inch 11.0 inch pagedimen
+		/Legal 8.5 inch 14.0 inch pagedimen
+		/Statement 5.5 inch 8.5 inch pagedimen
+		/Executive 7.5 inch 10.0 inch pagedimen
+		/A3 11.69 inch 16.5 inch pagedimen
+		/A4 8.26 inch 11.69 inch pagedimen
+		/A4Small 7.47 inch 10.85 inch pagedimen
+		/B4 10.125 inch 14.33 inch pagedimen
+		/B5 7.16 inch 10.125 inch pagedimen
+	end
+	} bind def
+/papersize {
+	papersizedict begin
+		/Letter {lettertray letter} def
+		/LetterSmall {lettertray lettersmall} def
+		/Tabloid {11x17tray 11x17} def
+		/Ledger {ledgertray ledger} def
+		/Legal {legaltray legal} def
+		/Statement {statementtray statement} def
+		/Executive {executivetray executive} def
+		/A3 {a3tray a3} def
+		/A4 {a4tray a4} def
+		/A4Small {a4tray a4small} def
+		/B4 {b4tray b4} def
+		/B5 {b5tray b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	statusdict begin stopped end 
+	} bind def
+/manualpapersize {
+	papersizedict begin
+		/Letter {letter} def
+		/LetterSmall {lettersmall} def
+		/Tabloid {11x17} def
+		/Ledger {ledger} def
+		/Legal {legal} def
+		/Statement {statement} def
+		/Executive {executive} def
+		/A3 {a3} def
+		/A4 {a4} def
+		/A4Small {a4small} def
+		/B4 {b4} def
+		/B5 {b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	stopped 
+	} bind def
+/desperatepapersize {
+	statusdict /setpageparams known
+		{
+		paperwidth paperheight 0 1 
+		statusdict begin
+		{setpageparams} stopped 
+		end
+		} {true} ifelse 
+	} bind def
+/DiacriticEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle /parenleft
+/parenright /asterisk /plus /comma /hyphen /period /slash /zero /one
+/two /three /four /five /six /seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at /A /B /C /D /E /F /G /H /I /J /K
+/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft /backslash
+/bracketright /asciicircum /underscore /grave /a /b /c /d /e /f /g /h
+/i /j /k /l /m /n /o /p /q /r /s /t /u /v /w /x /y /z /braceleft /bar
+/braceright /asciitilde /.notdef /Adieresis /Aring /Ccedilla /Eacute
+/Ntilde /Odieresis /Udieresis /aacute /agrave /acircumflex /adieresis
+/atilde /aring /ccedilla /eacute /egrave /ecircumflex /edieresis
+/iacute /igrave /icircumflex /idieresis /ntilde /oacute /ograve
+/ocircumflex /odieresis /otilde /uacute /ugrave /ucircumflex
+/udieresis /dagger /.notdef /cent /sterling /section /bullet
+/paragraph /germandbls /registered /copyright /trademark /acute
+/dieresis /.notdef /AE /Oslash /.notdef /.notdef /.notdef /.notdef
+/yen /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/ordfeminine /ordmasculine /.notdef /ae /oslash /questiondown
+/exclamdown /logicalnot /.notdef /florin /.notdef /.notdef
+/guillemotleft /guillemotright /ellipsis /.notdef /Agrave /Atilde
+/Otilde /OE /oe /endash /emdash /quotedblleft /quotedblright
+/quoteleft /quoteright /.notdef /.notdef /ydieresis /Ydieresis
+/fraction /currency /guilsinglleft /guilsinglright /fi /fl /daggerdbl
+/periodcentered /quotesinglbase /quotedblbase /perthousand
+/Acircumflex /Ecircumflex /Aacute /Edieresis /Egrave /Iacute
+/Icircumflex /Idieresis /Igrave /Oacute /Ocircumflex /.notdef /Ograve
+/Uacute /Ucircumflex /Ugrave /dotlessi /circumflex /tilde /macron
+/breve /dotaccent /ring /cedilla /hungarumlaut /ogonek /caron
+] def
+/ReEncode { 
+	dup 
+	length 
+	dict begin 
+	{
+	1 index /FID ne 
+		{def} 
+		{pop pop} ifelse 
+	} forall 
+	0 eq {/Encoding DiacriticEncoding def} if 
+	currentdict 
+	end 
+	} bind def
+FMPColor 
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPCOLOR} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPCOLORc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUECOLOR } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUECOLORc } def
+	}
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPGRAY} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPGRAYc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUEGRAY } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUEGRAYc } def
+	}
+ifelse
+/K { 
+	FMPrintAllColorsAsBlack {
+		dup 1 eq 2 index 1 eq and 3 index 1 eq and not
+			{7 {pop} repeat 0 0 0 1 0 0 0} if
+	} if 
+	FrameCurColors astore 
+	pop combineColor
+} bind def
+/graymode true def
+	/bwidth FMLOCAL
+	/bpside FMLOCAL
+	/bstring FMLOCAL
+	/onbits FMLOCAL
+	/offbits FMLOCAL
+	/xindex FMLOCAL
+	/yindex FMLOCAL
+	/x FMLOCAL
+	/y FMLOCAL
+/setPatternMode {
+	FMLevel1 {
+		/bwidth  exch def
+		/bpside  exch def
+		/bstring exch def
+		/onbits 0 def  /offbits 0 def
+		freq sangle landscape {90 add} if 
+			{/y exch def
+			 /x exch def
+			 /xindex x 1 add 2 div bpside mul cvi def
+			 /yindex y 1 add 2 div bpside mul cvi def
+			 bstring yindex bwidth mul xindex 8 idiv add get
+			 1 7 xindex 8 mod sub bitshift and 0 ne FrameNegative {not} if
+			 {/onbits  onbits  1 add def 1}
+			 {/offbits offbits 1 add def 0}
+			 ifelse
+			}
+			setscreen
+		offbits offbits onbits add div FrameNegative {1.0 exch sub} if
+		/FrameCurGray exch def
+	} { 
+		pop pop
+		dup patCache exch known {
+			patCache exch get
+		} { 
+			dup
+			patDict /bstring 3 -1 roll put
+			patDict 
+			9 PatFreq screenIndex get div dup matrix scale
+			makepattern
+			dup 
+			patCache 4 -1 roll 3 -1 roll put
+		} ifelse
+		/FrameCurGray 0 def
+		/FrameCurPat exch def
+	} ifelse
+	/graymode false def
+	combineColor
+} bind def
+/setGrayScaleMode {
+	graymode not {
+		/graymode true def
+		FMLevel1 {
+			setCurrentScreen
+		} if
+	} if
+	/FrameCurGray exch def
+	combineColor
+} bind def
+/normalize {
+	transform round exch round exch itransform
+	} bind def
+/dnormalize {
+	dtransform round exch round exch idtransform
+	} bind def
+/lnormalize { 
+	0 dtransform exch cvi 2 idiv 2 mul 1 add exch idtransform pop
+	} bind def
+/H { 
+	lnormalize setlinewidth
+	} bind def
+/Z {
+	setlinecap
+	} bind def
+	
+/PFill {
+	graymode FMLevel1 or not {
+		gsave 1 setgray eofill grestore
+	} if
+} bind def
+/PStroke {
+	graymode FMLevel1 or not {
+		gsave 1 setgray stroke grestore
+	} if
+	stroke
+} bind def
+	/fillvals FMLOCAL
+/X { 
+	fillvals exch get
+	dup type /stringtype eq
+	{8 1 setPatternMode} 
+	{setGrayScaleMode}
+	ifelse
+	} bind def
+/V { 
+	PFill gsave eofill grestore
+	} bind def
+/Vclip {
+	clip
+	} bind def
+/Vstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/N { 
+	PStroke
+	} bind def
+/Nclip {
+	strokepath clip newpath
+	} bind def
+/Nstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/M {newpath moveto} bind def
+/E {lineto} bind def
+/D {curveto} bind def
+/O {closepath} bind def
+	/n FMLOCAL
+/L { 
+ 	/n exch def
+	newpath
+	normalize
+	moveto 
+	2 1 n {pop normalize lineto} for
+	} bind def
+/Y { 
+	L 
+	closepath
+	} bind def
+	/x1 FMLOCAL
+	/x2 FMLOCAL
+	/y1 FMLOCAL
+	/y2 FMLOCAL
+/R { 
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	x1 y1
+	x2 y1
+	x2 y2
+	x1 y2
+	4 Y 
+	} bind def
+	/rad FMLOCAL
+/rarc 
+	{rad 
+	 arcto
+	} bind def
+/RR { 
+	/rad exch def
+	normalize
+	/y2 exch def
+	/x2 exch def
+	normalize
+	/y1 exch def
+	/x1 exch def
+	mark
+	newpath
+	{
+	x1 y1 rad add moveto
+	x1 y2 x2 y2 rarc
+	x2 y2 x2 y1 rarc
+	x2 y1 x1 y1 rarc
+	x1 y1 x1 y2 rarc
+	closepath
+	} stopped {x1 y1 x2 y2 R} if 
+	cleartomark
+	} bind def
+/RRR { 
+	/rad exch def
+	normalize /y4 exch def /x4 exch def
+	normalize /y3 exch def /x3 exch def
+	normalize /y2 exch def /x2 exch def
+	normalize /y1 exch def /x1 exch def
+	newpath
+	normalize moveto 
+	mark
+	{
+	x2 y2 x3 y3 rarc
+	x3 y3 x4 y4 rarc
+	x4 y4 x1 y1 rarc
+	x1 y1 x2 y2 rarc
+	closepath
+	} stopped
+	 {x1 y1 x2 y2 x3 y3 x4 y4 newpath moveto lineto lineto lineto closepath} if
+	cleartomark
+	} bind def
+/C { 
+	grestore
+	gsave
+	R 
+	clip
+	setCurrentScreen
+} bind def
+/CP { 
+	grestore
+	gsave
+	Y 
+	clip
+	setCurrentScreen
+} bind def
+	/FMpointsize FMLOCAL
+/F { 
+	FMfonts exch get
+	FMpointsize scalefont
+	setfont
+	} bind def
+/Q { 
+	/FMpointsize exch def
+	F 
+	} bind def
+/T { 
+	moveto show
+	} bind def
+/RF { 
+	rotate
+	0 ne {-1 1 scale} if
+	} bind def
+/TF { 
+	gsave
+	moveto 
+	RF
+	show
+	grestore
+	} bind def
+/P { 
+	moveto
+	0 32 3 2 roll widthshow
+	} bind def
+/PF { 
+	gsave
+	moveto 
+	RF
+	0 32 3 2 roll widthshow
+	grestore
+	} bind def
+/S { 
+	moveto
+	0 exch ashow
+	} bind def
+/SF { 
+	gsave
+	moveto
+	RF
+	0 exch ashow
+	grestore
+	} bind def
+/B { 
+	moveto
+	0 32 4 2 roll 0 exch awidthshow
+	} bind def
+/BF { 
+	gsave
+	moveto
+	RF
+	0 32 4 2 roll 0 exch awidthshow
+	grestore
+	} bind def
+/G { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	PFill fill
+	grestore
+	} bind def
+/Gstrk {
+	savematrix
+    newpath
+    2 index 2 div add exch 3 index 2 div sub exch 
+    normalize 2 index 2 div sub exch 3 index 2 div add exch 
+    translate
+    scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+    } bind def
+/Gclip { 
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	clip newpath
+	restorematrix
+	} bind def
+/GG { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	rotate 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath
+	PFill
+	fill
+	grestore
+	} bind def
+/GGclip { 
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath
+	clip newpath
+	restorematrix
+	} bind def
+/GGstrk { 
+	savematrix
+    newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath 
+	restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/A { 
+	gsave
+	savematrix
+	newpath
+	2 index 2 div add exch 3 index 2 div sub exch 
+	normalize 2 index 2 div sub exch 3 index 2 div add exch 
+	translate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+/Aclip {
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	strokepath clip newpath
+	restorematrix
+} bind def
+/Astrk {
+	Gstrk
+} bind def
+/AA { 
+	gsave
+	savematrix
+	newpath
+	
+	3 index 2 div add exch 4 index 2 div sub exch 
+	
+	normalize 3 index 2 div sub exch 4 index 2 div add exch
+	translate 
+	rotate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+/AAclip {
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath
+	strokepath clip newpath
+	restorematrix
+} bind def
+/AAstrk {
+	GGstrk
+} bind def
+	/x FMLOCAL
+	/y FMLOCAL
+	/w FMLOCAL
+	/h FMLOCAL
+	/xx FMLOCAL
+	/yy FMLOCAL
+	/ww FMLOCAL
+	/hh FMLOCAL
+	/FMsaveobject FMLOCAL
+	/FMoptop FMLOCAL
+	/FMdicttop FMLOCAL
+/BEGINPRINTCODE { 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count 7 sub def 
+	/FMsaveobject save def
+	userdict begin 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	3 index neg 3 index neg translate
+	} bind def
+/ENDPRINTCODE {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMsaveobject restore 
+	} bind def
+/gn { 
+	0 
+	{	46 mul 
+		cf read pop 
+		32 sub 
+		dup 46 lt {exit} if 
+		46 sub add 
+		} loop
+	add 
+	} bind def
+	/str FMLOCAL
+/cfs { 
+	/str sl string def 
+	0 1 sl 1 sub {str exch val put} for 
+	str def 
+	} bind def
+/ic [ 
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0
+	{0 hx} {1 hx} {2 hx} {3 hx} {4 hx} {5 hx} {6 hx} {7 hx} {8 hx} {9 hx}
+	{10 hx} {11 hx} {12 hx} {13 hx} {14 hx} {15 hx} {16 hx} {17 hx} {18 hx}
+	{19 hx} {gn hx} {0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}
+	{13} {14} {15} {16} {17} {18} {19} {gn} {0 wh} {1 wh} {2 wh} {3 wh}
+	{4 wh} {5 wh} {6 wh} {7 wh} {8 wh} {9 wh} {10 wh} {11 wh} {12 wh}
+	{13 wh} {14 wh} {gn wh} {0 bl} {1 bl} {2 bl} {3 bl} {4 bl} {5 bl} {6 bl}
+	{7 bl} {8 bl} {9 bl} {10 bl} {11 bl} {12 bl} {13 bl} {14 bl} {gn bl}
+	{0 fl} {1 fl} {2 fl} {3 fl} {4 fl} {5 fl} {6 fl} {7 fl} {8 fl} {9 fl}
+	{10 fl} {11 fl} {12 fl} {13 fl} {14 fl} {gn fl}
+	] def
+	/sl FMLOCAL
+	/val FMLOCAL
+	/ws FMLOCAL
+	/im FMLOCAL
+	/bs FMLOCAL
+	/cs FMLOCAL
+	/len FMLOCAL
+	/pos FMLOCAL
+/ms { 
+	/sl exch def 
+	/val 255 def 
+	/ws cfs 
+	/im cfs 
+	/val 0 def 
+	/bs cfs 
+	/cs cfs 
+	} bind def
+400 ms 
+/ip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+	
+	} bind def
+/rip { 
+	   
+	  
+	  bis ris copy pop 
+      is
+      0
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop 
+	  ris gis copy pop 
+	  dup is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop
+	  gis bis copy pop 
+	  dup add is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+      pop 
+      
+      } bind def
+/wh { 
+	/len exch def 
+	/pos exch def 
+	ws 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/bl { 
+	/len exch def 
+	/pos exch def 
+	bs 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/s1 1 string def
+/fl { 
+	/len exch def 
+	/pos exch def 
+	/val cf s1 readhexstring pop 0 get def
+	pos 1 pos len add 1 sub {im exch val put} for
+	pos len 
+	} bind def
+/hx { 
+	3 copy getinterval 
+	cf exch readhexstring pop pop 
+	} bind def
+	/h FMLOCAL
+	/w FMLOCAL
+	/d FMLOCAL
+	/lb FMLOCAL
+	/bitmapsave FMLOCAL
+	/is FMLOCAL
+	/cf FMLOCAL
+/wbytes { 
+      dup dup
+      24 eq { pop pop 3 mul }
+      { 8 eq {pop} {1 eq {7 add 8 idiv} {3 add 4 idiv} ifelse} ifelse } ifelse
+	} bind def
+/BEGINBITMAPBWc { 
+	1 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAPGRAYc { 
+	8 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAP2BITc { 
+	2 {} COMMONBITMAPc
+	} bind def
+/COMMONBITMAPc { 
+		 
+	/r exch def
+	/d exch def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	r                    
+	/is im 0 lb getinterval def 
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{ip} image 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BEGINBITMAPBW { 
+	1 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAPGRAY { 
+	8 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAP2BIT { 
+	2 {} COMMONBITMAP
+	} bind def
+/COMMONBITMAP { 
+	/r exch def
+	/d exch def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/bitmapsave save def 
+	r                    
+	/is w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop} image
+	bitmapsave restore 
+	grestore
+	} bind def
+/ngrayt 256 array def
+/nredt 256 array def
+/nbluet 256 array def
+/ngreent 256 array def
+	/gryt FMLOCAL
+	/blut FMLOCAL
+	/grnt FMLOCAL
+	/redt FMLOCAL
+	/indx FMLOCAL
+	/cynu FMLOCAL
+	/magu FMLOCAL
+	/yelu FMLOCAL
+	/k FMLOCAL
+	/u FMLOCAL
+FMLevel1 {
+/colorsetup {
+	currentcolortransfer
+	/gryt exch def
+	/blut exch def
+	/grnt exch def
+	/redt exch def
+	0 1 255 {
+		/indx exch def
+		/cynu 1 red indx get 255 div sub def
+		/magu 1 green indx get 255 div sub def
+		/yelu 1 blue indx get 255 div sub def
+		/k cynu magu min yelu min def
+		/u k currentundercolorremoval exec def
+%		/u 0 def
+		nredt indx 1 0 cynu u sub max sub redt exec put
+		ngreent indx 1 0 magu u sub max sub grnt exec put
+		nbluet indx 1 0 yelu u sub max sub blut exec put
+		ngrayt indx 1 k currentblackgeneration exec sub gryt exec put
+	} for
+	{255 mul cvi nredt exch get}
+	{255 mul cvi ngreent exch get}
+	{255 mul cvi nbluet exch get}
+	{255 mul cvi ngrayt exch get}
+	setcolortransfer
+	{pop 0} setundercolorremoval
+	{} setblackgeneration
+	} bind def
+}
+{
+/colorSetup2 {
+	[ /Indexed /DeviceRGB 255 
+		{dup red exch get 255 div 
+		 exch dup green exch get 255 div 
+		 exch blue exch get 255 div}
+	] setcolorspace
+} bind def
+} ifelse
+	/tran FMLOCAL
+/fakecolorsetup {
+	/tran 256 string def
+	0 1 255 {/indx exch def 
+		tran indx
+		red indx get 77 mul
+		green indx get 151 mul
+		blue indx get 28 mul
+		add add 256 idiv put} for
+	currenttransfer
+	{255 mul cvi tran exch get 255.0 div}
+	exch concatprocs settransfer
+} bind def
+/BITMAPCOLOR { 
+	/d 8 def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/bitmapsave save def
+	FMLevel1 {	
+		colorsetup
+		/is w d wbytes string def
+		/cf currentfile def 
+		w h d [w 0 0 h neg 0 h] 
+		{cf is readhexstring pop} {is} {is} true 3 colorimage 
+	} {
+		colorSetup2
+		/is w d wbytes string def
+		/cf currentfile def 
+		7 dict dup begin
+			/ImageType 1 def
+			/Width w def
+			/Height h def
+			/ImageMatrix [w 0 0 h neg 0 h] def
+			/DataSource {cf is readhexstring pop} bind def
+			/BitsPerComponent d def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPCOLORc { 
+	/d 8 def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	FMLevel1 {	
+		colorsetup
+		/is im 0 lb getinterval def 
+		ws 0 lb getinterval is copy pop 
+		/cf currentfile def 
+		w h d [w 0 0 h neg 0 h] 
+		{ip} {is} {is} true 3 colorimage
+	} {
+		colorSetup2
+		/is im 0 lb getinterval def 
+		ws 0 lb getinterval is copy pop 
+		/cf currentfile def 
+		7 dict dup begin
+			/ImageType 1 def
+			/Width w def
+			/Height h def
+			/ImageMatrix [w 0 0 h neg 0 h] def
+			/DataSource {ip} bind def
+			/BitsPerComponent d def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLORc { 
+	/d 24 def
+        gsave
+ 	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/ris im 0 w getinterval def	
+	/gis im w w getinterval def	
+	/bis im w 2 mul w getinterval def 
+        
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {w rip pop ris} {gis} {bis} true 3 colorimage
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUECOLOR { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop } 
+        { cf gis readhexstring pop } 
+        { cf bis readhexstring pop } 
+        true 3 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUEGRAYc { 
+	/d 24 def
+        gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/ris im 0 w getinterval def	
+	/gis im w w getinterval def	
+	/bis im w 2 mul w getinterval def 
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {w rip pop ris gis bis w gray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/ww FMLOCAL
+/r FMLOCAL
+/g FMLOCAL
+/b FMLOCAL
+/i FMLOCAL
+/gray { 
+        /ww exch def
+        /b exch def
+        /g exch def
+        /r exch def
+        0 1 ww 1 sub { /i exch def r i get .299 mul g i get .587 mul
+			b i get .114 mul add add r i 3 -1 roll floor cvi put } for
+        r
+        } bind def
+/BITMAPTRUEGRAY { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop 
+          cf gis readhexstring pop 
+          cf bis readhexstring pop w gray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPGRAY { 
+	8 {fakecolorsetup} COMMONBITMAP
+	} bind def
+/BITMAPGRAYc { 
+	8 {fakecolorsetup} COMMONBITMAPc
+	} bind def
+/ENDBITMAP {
+	} bind def
+end 
+	/ALDsave FMLOCAL
+	/ALDmatrix matrix def ALDmatrix currentmatrix pop
+/StartALD {
+	/ALDsave save def
+	 savematrix
+	 ALDmatrix setmatrix
+	} bind def
+/InALD {
+	 restorematrix
+	} bind def
+/DoneALD {
+	 ALDsave restore
+	} bind def
+/I { setdash } bind def
+/J { [] 0 setdash } bind def
+%%EndProlog
+%%BeginSetup
+(4.0) FMVERSION
+1 1 0 0 612 792 0 1 14 FMDOCUMENT
+0 0 /Helvetica-Bold FMFONTDEFINE
+1 0 /Times-Italic FMFONTDEFINE
+2 0 /Helvetica FMFONTDEFINE
+3 0 /Palatino-Roman FMFONTDEFINE
+4 0 /Palatino-Italic FMFONTDEFINE
+5 0 /Courier FMFONTDEFINE
+6 0 /Times-Bold FMFONTDEFINE
+7 0 /Times-Roman FMFONTDEFINE
+8 0 /Helvetica-Oblique FMFONTDEFINE
+32 FMFILLS
+0 0 FMFILL
+1 0.1 FMFILL
+2 0.3 FMFILL
+3 0.5 FMFILL
+4 0.7 FMFILL
+5 0.9 FMFILL
+6 0.97 FMFILL
+7 1 FMFILL
+8 <0f1e3c78f0e1c387> FMFILL
+9 <0f87c3e1f0783c1e> FMFILL
+10 <cccccccccccccccc> FMFILL
+11 <ffff0000ffff0000> FMFILL
+12 <8142241818244281> FMFILL
+13 <03060c183060c081> FMFILL
+14 <8040201008040201> FMFILL
+16 1 FMFILL
+17 0.9 FMFILL
+18 0.7 FMFILL
+19 0.5 FMFILL
+20 0.3 FMFILL
+21 0.1 FMFILL
+22 0.03 FMFILL
+23 0 FMFILL
+24 <f0e1c3870f1e3c78> FMFILL
+25 <f0783c1e0f87c3e1> FMFILL
+26 <3333333333333333> FMFILL
+27 <0000ffff0000ffff> FMFILL
+28 <7ebddbe7e7dbbd7e> FMFILL
+29 <fcf9f3e7cf9f3f7e> FMFILL
+30 <7fbfdfeff7fbfdfe> FMFILL
+%%EndSetup
+%%Page: "-1" 1
+%%BeginPaperSize: Letter
+%%EndPaperSize
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+J
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 18 Q
+0 X
+(Hash Tables for the) 222.48 407.3 T
+(Standard Template Library) 191.97 390.24 T
+1 14 Q
+(Javier Barreirro*, Robert Fraley**, David R. Musser*) 151.82 342.26 T
+1 12 Q
+(*Rensselaer Polytechnic Institute) 225.68 315.38 T
+(Computer Science Department) 232.01 302.38 T
+(Troy, NY 12180) 267.83 289.38 T
+(**Hewlett-Packard Laboratories) 226.17 263.38 T
+(1501 Page Mill Road) 254.5 250.38 T
+(Palo Alto, CA 94304) 256 237.38 T
+72 72 540 720 C
+72 576 540 710 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+288 584 522 701 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+288 584 522 701 C
+300 586 510 689 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+306 590.33 504 683 R
+7 X
+0 0 0 1 0 0 0 K
+V
+2 10 Q
+0 X
+(Doc No: X3J16/94-0218) 306 676.33 T
+(WG21/N0605) 350.48 660.33 T
+(Date: January 30, 1995) 306 644.33 T
+(Project: Programming Language C++) 306 628.33 T
+(Reply to: musser@cs.rpi.edu) 306 612.33 T
+(fraley@hpl.hp.com) 356.04 596.33 T
+288 584 522 701 C
+72 576 540 710 C
+72 72 540 720 C
+0 0 612 792 C
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "-1" 1
+%%Page: "0" 2
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+0 0 0 1 0 0 0 K
+V
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "0" 2
+%%Page: "1" 3
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(1) 303.5 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+0 18 Q
+0 X
+(Hash Tables for the) 222.48 708 T
+(Standard Template Library) 191.97 690 T
+0 12 Q
+(1  Introduction) 72 621.25 T
+3 10 Q
+-0.2 (The Standard Template Library \050STL\051, which has been approved for inclusion in the C++ Standard Library) 72 602.96 P
+0.42 (by the ANSI/ISO C++ Standards Committee, supplies a set of associative container classes \050set, multiset,) 72 590.96 P
+-0.16 (map, multimap\051 that support fast storage retrieval of data based on keys.  As specified in the STL standard) 72 578.96 P
+-0.11 (these containers could be more precisely described as) 72 566.96 P
+4 F
+-0.11 (sorted) 309.7 566.96 P
+3 F
+-0.11 ( associative containers, since in addition to fast) 334.14 566.96 P
+0.39 (storage and retrieval they are required to support efficient iteration through the entries in sorted order---) 72 554.96 P
+2.26 (according to the order determined by a boolean-valued function supplied as a parameter when the) 72 542.96 P
+-0.29 (container is created.  The sorted iteration capability is not always needed.  If the requirement for fast sorted) 72 530.96 P
+0.62 (iteration is dropped, a wider range of implementations is possible; in particular, an attractive choice is a) 72 518.96 P
+0.88 (hash table implementation.  In this report we first show how to restructure the existing STL associative) 72 506.96 P
+1.71 (container requirements into two parts: \0501\051 base requirements for all associative containers, and \0502\051 an) 72 494.96 P
+1.13 (additional set of requirements for sorting capabilities.We then introduce a set of requirements \0503\051 for a) 72 482.96 P
+-0.4 (hashing capability that can be added to \0501\051 to produce a set of requirements for hash tables. These additions) 72 470.96 P
+0.26 (are fully consistent with the STL framework and also serve as a significant example of the extensibility of) 72 458.96 P
+(the framework.) 72 446.96 T
+0.51 (We have developed and experimented with two independent hash table implementations, which will be) 72 427.96 P
+1.12 (described in detail in a separate report. These implementations not only demonstrate the maturity and) 72 415.96 P
+1.51 (consistency of the requirements described here, but should also be of immediate practical use to C++) 72 403.96 P
+2.7 (programmers who need associative containers but can do without sorted order of the keys. These) 72 391.96 P
+(implementations will be available on or before February 20, 1995.) 72 379.96 T
+1.38 (Part of the material in the following section is adapted directly from) 72 360.96 P
+4 F
+1.38 (The Standard Template Library) 391.26 360.96 P
+3 F
+1.38 (, by) 522.53 360.96 P
+2.58 (Alexander Stepanov and Meng Lee, Hewlett-Packard Report, December 6, 1994. This section is the) 72 348.96 P
+0.76 (restructuring and extension of the section on associative containers \050Section 8\051 from that document. The) 72 336.96 P
+(intended changes are the following:) 72 324.96 T
+(\245) 81.6 310.96 T
+(The name \322Associative containers\323 has been changed to \322Sorted associative containers\323) 90 310.96 T
+(\245) 81.6 297.96 T
+(The requirements for Associative containers have been divided into a base set which is shared with) 90 297.96 T
+(unordered associations such as hashing) 90 286.96 T
+(\245) 81.6 273.96 T
+(A new requirements table has been added to define the requirements for hash tables.) 90 273.96 T
+0.07 (The interfaces of container classes set, multiset, map, and multimap have been included for completeness;) 72 255.96 P
+(no changes are being proposed to these classes.) 72 243.96 T
+0 12 Q
+(2  Associative containers) 72 213.88 T
+3 10 Q
+1.4 (Associative containers provide an ability for fast retrieval of data based on keys. There are two major) 72 195.58 P
+-0.4 (categories of associative containers:) 72 183.58 P
+4 F
+-0.4 (sorted associative containers) 229.66 183.58 P
+3 F
+-0.4 ( and) 343.1 183.58 P
+4 F
+-0.4 (hashed associative containers) 364.22 183.58 P
+3 F
+-0.4 (; the latter are) 480.43 183.58 P
+0.79 (also called) 72 171.58 P
+4 F
+0.79 (hash tables) 122.34 171.58 P
+3 F
+0.79 (. These categories share many requirements, which we call the) 166.91 171.58 P
+4 F
+0.79 (base requirements for) 452.49 171.58 P
+(associative containers) 72 159.58 T
+3 F
+(.) 159.3 159.58 T
+0.42 (The library provides four basic kinds of sorted associative containers:) 72 140.58 P
+5 9 Q
+0.91 (set) 385.09 140.58 P
+3 10 Q
+0.42 (,) 401.29 140.58 P
+5 9 Q
+0.91 (multiset) 406.71 140.58 P
+3 10 Q
+0.42 (,) 449.91 140.58 P
+5 9 Q
+0.91 (map) 455.33 140.58 P
+3 10 Q
+0.42 ( and) 471.53 140.58 P
+5 9 Q
+0.91 (multimap) 494.3 140.58 P
+3 10 Q
+0.42 (,) 537.5 140.58 P
+(and four basic kinds of hash tables:) 72 128.58 T
+5 9 Q
+(hash_set) 229.86 128.58 T
+3 10 Q
+(,) 273.06 128.58 T
+5 9 Q
+(hash_multiset) 278.06 128.58 T
+3 10 Q
+(,) 348.26 128.58 T
+5 9 Q
+(hash_map) 353.26 128.58 T
+3 10 Q
+( and) 396.46 128.58 T
+5 9 Q
+(hash_multimap) 418.39 128.58 T
+3 10 Q
+(.) 488.59 128.58 T
+0.78 (All of the sorted associative containers are parameterized on) 72 109.58 P
+5 9 Q
+1.68 (Key) 348.58 109.58 P
+3 10 Q
+0.78 ( and an ordering relation) 364.78 109.58 P
+5 9 Q
+1.68 (Compare) 481.58 109.58 P
+3 10 Q
+0.78 ( that) 519.38 109.58 P
+0.57 (induces a total ordering on elements of) 72 97.58 P
+5 9 Q
+1.22 (Key) 250.74 97.58 P
+3 10 Q
+0.57 (. In addition,) 266.95 97.58 P
+5 9 Q
+1.22 (map) 327.91 97.58 P
+3 10 Q
+0.57 ( and) 344.11 97.58 P
+5 9 Q
+1.22 (multimap) 367.18 97.58 P
+3 10 Q
+0.57 ( associate an arbitrary type) 410.38 97.58 P
+5 9 Q
+1.22 (T) 534.6 97.58 P
+3 10 Q
+(with the) 72 85.58 T
+5 9 Q
+(Key) 111.2 85.58 T
+3 10 Q
+(. The object of type) 127.4 85.58 T
+5 9 Q
+(Compare) 213.37 85.58 T
+3 10 Q
+( is called the) 251.17 85.58 T
+4 F
+( comparison object) 305.85 85.58 T
+3 F
+( of a container.) 380.28 85.58 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "1" 3
+%%Page: "2" 4
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(2) 303.5 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+0 X
+0.61 (All of the hash tables are parameterized on) 72 713.33 P
+5 9 Q
+1.32 (Key) 269.18 713.33 P
+3 10 Q
+0.61 (, a function type) 285.38 713.33 P
+5 9 Q
+1.32 (Hasher) 362.02 713.33 P
+3 10 Q
+0.61 (that maps elements of) 401.15 713.33 P
+5 9 Q
+1.32 (Key) 503.24 713.33 P
+3 10 Q
+0.61 ( into) 519.44 713.33 P
+-0.53 (integers, and a function type) 72 701.33 P
+5 9 Q
+-1.14 (KeyEqual) 198.3 701.33 P
+3 10 Q
+-0.53 ( that induces an equivalence relation on elements of) 241.5 701.33 P
+5 9 Q
+-1.14 (Key) 468.08 701.33 P
+3 10 Q
+-0.53 (. In addition,) 484.28 701.33 P
+5 9 Q
+0.79 (hash_map) 72 689.33 P
+3 10 Q
+0.37 ( and) 115.2 689.33 P
+5 9 Q
+0.79 (hash_multimap) 137.86 689.33 P
+3 10 Q
+0.37 ( associate an arbitrary type) 208.06 689.33 P
+5 9 Q
+0.79 (T) 331.27 689.33 P
+3 10 Q
+0.37 ( with the) 336.67 689.33 P
+5 9 Q
+0.79 (Key) 379.47 689.33 P
+3 10 Q
+0.37 (. The object of type) 395.67 689.33 P
+5 9 Q
+0.79 (KeyEqual) 483.46 689.33 P
+3 10 Q
+0.37 (is) 532.85 689.33 P
+(called the) 72 677.33 T
+4 F
+( key-equivalence object) 114.53 677.33 T
+3 F
+( of a container.) 205.82 677.33 T
+0.09 (With sorted associative containers, when we talk about equality of keys we mean the equivalence relation) 72 658.33 P
+-0.19 (imposed by the comparison and) 72 646.33 P
+4 F
+-0.19 (not) 215.89 646.33 P
+3 F
+-0.19 ( the) 229.22 646.33 P
+5 9 Q
+-0.42 (operator==) 247.71 646.33 P
+3 10 Q
+-0.19 ( on keys. That is, two keys) 301.71 646.33 P
+5 9 Q
+-0.42 (k1) 418.86 646.33 P
+3 10 Q
+-0.19 ( and) 429.66 646.33 P
+5 9 Q
+-0.42 (k2) 451.2 646.33 P
+3 10 Q
+-0.19 ( are considered to) 462 646.33 P
+(be equal if for the comparison object) 72 634.33 T
+5 9 Q
+(comp) 234.94 634.33 T
+3 10 Q
+(,) 256.54 634.33 T
+5 9 Q
+(comp\050k1, k2\051 == false && comp\050k2, k1\051 == false) 261.54 634.33 T
+3 10 Q
+(.) 509.94 634.33 T
+0.47 (With hash tables, when we talk about equality of keys we mean the equivalence relation imposed by the) 72 615.33 P
+0.34 (key-equivalence object and) 72 603.33 P
+4 F
+0.34 (not) 195.24 603.33 P
+3 F
+0.34 ( the) 208.57 603.33 P
+5 9 Q
+0.74 (operator==) 228.13 603.33 P
+3 10 Q
+0.34 ( on keys. That is, two keys) 282.13 603.33 P
+5 9 Q
+0.74 (k1) 403.02 603.33 P
+3 10 Q
+0.34 ( and) 413.82 603.33 P
+5 9 Q
+0.74 (k2) 436.43 603.33 P
+3 10 Q
+0.34 ( are considered to be) 447.23 603.33 P
+(equal if for the key equivalence object) 72 591.33 T
+5 9 Q
+(equal) 241.14 591.33 T
+3 10 Q
+(,) 268.14 591.33 T
+5 9 Q
+(equal\050k1, k2\051 == true.) 273.14 591.33 T
+3 10 Q
+-0.52 (An associative container \050either sorted or hashed\051 supports) 72 572.33 P
+4 F
+-0.52 (unique keys) 331.17 572.33 P
+3 F
+-0.52 ( if it may contain at most one element) 378.35 572.33 P
+0.83 (for each key. Otherwise, it supports) 72 560.33 P
+4 F
+0.83 (equal keys) 237 560.33 P
+3 F
+0.83 (.) 278.85 560.33 P
+5 9 Q
+1.79 (set) 284.68 560.33 P
+3 10 Q
+0.83 (,) 300.88 560.33 P
+5 9 Q
+1.79 (map) 306.71 560.33 P
+3 10 Q
+0.83 (,) 322.91 560.33 P
+5 9 Q
+1.79 (hash_set) 328.74 560.33 P
+3 10 Q
+0.83 (, and) 371.94 560.33 P
+5 9 Q
+1.79 (hash_map) 398.02 560.33 P
+3 10 Q
+0.83 ( support unique keys.) 441.22 560.33 P
+5 9 Q
+(multiset) 72 548.33 T
+3 10 Q
+(,) 115.2 548.33 T
+5 9 Q
+(multimap, hash_multiset,) 120.2 548.33 T
+3 10 Q
+(and) 255.2 548.33 T
+5 9 Q
+( hash_multimap) 272.13 548.33 T
+3 10 Q
+(support equal keys.) 353.13 548.33 T
+0.84 (For) 72 529.33 P
+5 9 Q
+1.81 (set) 90.31 529.33 P
+3 10 Q
+0.84 (,) 106.51 529.33 P
+5 9 Q
+1.81 (multiset) 112.35 529.33 P
+3 10 Q
+0.84 (,) 155.54 529.33 P
+5 9 Q
+1.81 (hash_set) 161.38 529.33 P
+3 10 Q
+0.84 (, and) 204.58 529.33 P
+5 9 Q
+1.81 (hash_multiset) 230.69 529.33 P
+3 10 Q
+0.84 (, the value type is the same as the key type. For) 300.89 529.33 P
+5 9 Q
+1.81 (map) 521.3 529.33 P
+3 10 Q
+0.84 (,) 537.5 529.33 P
+5 9 Q
+(multimap) 72 517.33 T
+3 10 Q
+(,) 115.2 517.33 T
+5 9 Q
+(hash_map) 120.2 517.33 T
+3 10 Q
+(, and) 163.4 517.33 T
+5 9 Q
+(hash_multimap) 187.83 517.33 T
+3 10 Q
+(, it is equal to) 258.03 517.33 T
+5 9 Q
+(pair<const Key, T>) 319.4 517.33 T
+3 10 Q
+(.) 416.6 517.33 T
+5 9 Q
+0.67 (The iterator) 72 498.33 P
+3 10 Q
+0.31 ( type of a sorted associative container is of the bidirectional iterator category, while that of) 137.47 498.33 P
+-0.44 (hash tables is of the forward iterator category.) 72 486.33 P
+5 9 Q
+-0.95 (insert) 274.15 486.33 P
+3 10 Q
+-0.44 ( does not affect the validity of iterators and references) 306.55 486.33 P
+(to the container, and) 72 474.33 T
+5 9 Q
+(erase) 165.47 474.33 T
+3 10 Q
+( invalidates only the iterators and references to the erased elements.) 192.47 474.33 T
+0.56 (In the following table,) 72 455.33 P
+5 9 Q
+1.2 (X) 173.97 455.33 P
+3 10 Q
+0.56 ( is an associative container class,) 179.37 455.33 P
+5 9 Q
+1.2 (a) 328.36 455.33 P
+3 10 Q
+0.56 ( is a value of) 333.76 455.33 P
+5 9 Q
+1.2 (X) 394.36 455.33 P
+3 10 Q
+0.56 (,) 399.76 455.33 P
+5 9 Q
+1.2 (a_uniq) 405.32 455.33 P
+3 10 Q
+0.56 ( is a value of) 437.72 455.33 P
+5 9 Q
+1.2 (X) 498.32 455.33 P
+3 10 Q
+0.56 ( when) 503.72 455.33 P
+5 9 Q
+1.2 (X) 534.6 455.33 P
+3 10 Q
+-0.34 (supports unique keys, and) 72 443.33 P
+5 9 Q
+-0.74 (a_eq) 190.59 443.33 P
+3 10 Q
+-0.34 ( is a value of) 212.19 443.33 P
+5 9 Q
+-0.74 (X) 268.31 443.33 P
+3 10 Q
+-0.34 ( when) 273.71 443.33 P
+5 9 Q
+-0.74 (X) 302.79 443.33 P
+3 10 Q
+-0.34 ( supports multiple keys,) 308.19 443.33 P
+5 9 Q
+-0.74 (i) 416.33 443.33 P
+3 10 Q
+-0.34 ( and) 421.73 443.33 P
+5 9 Q
+-0.74 (j) 442.97 443.33 P
+3 10 Q
+-0.34 ( satisfy input iterator) 448.37 443.33 P
+0.12 (requirements and refer to elements of) 72 431.33 P
+5 9 Q
+0.25 (value_type) 241.34 431.33 P
+3 10 Q
+0.12 (,) 295.34 431.33 P
+5 9 Q
+0.25 ([i, j\051) 300.45 431.33 P
+3 10 Q
+0.12 ( is a valid range,) 333.11 431.33 P
+5 9 Q
+0.25 (p) 408.54 431.33 P
+3 10 Q
+0.12 ( is a valid iterator to) 413.94 431.33 P
+5 9 Q
+0.25 (a) 505.67 431.33 P
+3 10 Q
+0.12 (,) 511.07 431.33 P
+5 9 Q
+0.25 (q) 516.18 431.33 P
+3 10 Q
+0.12 (,) 521.58 431.33 P
+5 9 Q
+0.25 (q1) 526.7 431.33 P
+3 10 Q
+0.12 (,) 537.5 431.33 P
+5 9 Q
+0.14 (q2) 72 419.33 P
+3 10 Q
+0.06 ( are valid dereferenceable iterators to) 82.8 419.33 P
+5 9 Q
+0.14 (a) 249.82 419.33 P
+3 10 Q
+0.06 (,) 255.23 419.33 P
+5 9 Q
+0.14 ([q1, q2\051) 260.29 419.33 P
+3 10 Q
+0.06 ( is a valid range,) 303.63 419.33 P
+5 9 Q
+0.14 (t) 378.8 419.33 P
+3 10 Q
+0.06 ( is a value of) 384.2 419.33 P
+5 9 Q
+0.14 (X::value_type) 442.34 419.33 P
+3 10 Q
+0.06 ( and) 512.54 419.33 P
+5 9 Q
+0.14 (k) 534.6 419.33 P
+3 10 Q
+(is a value of) 72 407.33 T
+5 9 Q
+(X::key_type) 127.32 407.33 T
+3 10 Q
+(.) 186.72 407.33 T
+6 12 Q
+(T) 106.78 384 T
+(able 1: Base r) 113.68 384 T
+(equir) 183.13 384 T
+(ements for associative container \050in addition to container\051) 210.25 384 T
+7 10 Q
+(expression) 101.01 353.33 T
+(return type) 197.8 353.33 T
+(assertion/note) 328.62 359.33 T
+(pre/post-condition) 319.73 347.33 T
+(complexity) 470.7 353.33 T
+5 9 Q
+(X::key_type) 78 326 T
+(Key) 178.8 326 T
+7 10 Q
+(compile time) 452.4 325.33 T
+5 9 Q
+(a_uniq.insert\050t\051) 78 306 T
+(pair<iterator,) 178.8 305.33 T
+(bool>) 178.8 293.33 T
+7 10 Q
+-0.13 (inserts) 272.4 305.33 P
+5 9 Q
+-0.27 (t) 300.88 305.33 P
+7 10 Q
+-0.13 ( if and only if there is no element) 306.28 305.33 P
+0 (in the container with key equal to the key) 272.4 293.33 P
+-0.46 (of) 272.4 281.33 P
+5 9 Q
+-1 (t) 282.77 281.33 P
+7 10 Q
+-0.46 (. The) 288.17 281.33 P
+5 9 Q
+-1 (bool) 310.3 281.33 P
+7 10 Q
+-0.46 ( component of the returned) 331.9 281.33 P
+(pair indicates whether the insertion takes) 272.4 269.33 T
+(place and the) 272.4 257.33 T
+5 9 Q
+(iterator) 327.66 257.33 T
+7 10 Q
+( component of) 370.86 257.33 T
+(the pair points to the element with key) 272.4 245.33 T
+(equal to the key of) 272.4 233.33 T
+5 9 Q
+(t) 349.33 233.33 T
+7 10 Q
+(.) 354.73 233.33 T
+(logarithmic) 452.4 305.33 T
+5 9 Q
+(a_eq.insert\050t\051) 78 214 T
+(iterator) 178.8 213.33 T
+7 10 Q
+(inserts) 272.4 213.33 T
+5 9 Q
+(t) 301.01 213.33 T
+7 10 Q
+( and returns the iterator pointing) 306.41 213.33 T
+(to the newly inserted element.) 272.4 201.33 T
+(logarithmic) 452.4 213.33 T
+5 9 Q
+(a.insert\050i, j\051) 78 182 T
+7 10 Q
+(result is not used) 178.8 181.33 T
+(inserts the elements from the range) 272.4 181.33 T
+5 9 Q
+([i,) 415.15 181.33 T
+(j\051) 272.4 169.33 T
+7 10 Q
+( into the container) 283.2 169.33 T
+(.) 355.14 169.33 T
+5 9 Q
+(Nlog\050size\050\051+N\051) 452.4 181.33 T
+7 10 Q
+(\050) 452.4 169.33 T
+5 9 Q
+(N) 455.73 169.33 T
+7 10 Q
+( is the distance) 461.13 169.33 T
+(from) 452.4 157.33 T
+5 9 Q
+(i) 474.34 157.33 T
+7 10 Q
+( to) 479.74 157.33 T
+5 9 Q
+(j) 492.52 157.33 T
+7 10 Q
+(\051 in gen-) 497.92 157.33 T
+(eral; linear if) 452.4 145.33 T
+5 9 Q
+([i,) 506.55 145.33 T
+(j\051) 452.4 133.33 T
+7 10 Q
+( is sorted accord-) 463.2 133.33 T
+(ing to) 452.4 121.33 T
+5 9 Q
+(value_comp\050\051) 452.4 109.33 T
+72 373.75 72 102.25 2 L
+V
+0.5 H
+0 Z
+N
+172.8 374.25 172.8 101.75 2 L
+V
+N
+266.4 374.25 266.4 101.75 2 L
+V
+N
+446.4 374.25 446.4 101.75 2 L
+V
+N
+540 373.75 540 102.25 2 L
+V
+N
+71.75 374 540.25 374 2 L
+V
+N
+72.25 339.25 539.75 339.25 2 L
+V
+N
+72.25 336.75 539.75 336.75 2 L
+V
+N
+71.75 318 540.25 318 2 L
+V
+N
+71.75 226 540.25 226 2 L
+V
+N
+71.75 194 540.25 194 2 L
+V
+N
+71.75 102 540.25 102 2 L
+V
+N
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "2" 4
+%%Page: "3" 5
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(3) 303.5 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+0 11 Q
+0 X
+(2.1 Sorted Associative Containers) 72 360.98 T
+3 10 Q
+(The additional requirements for sorted associative containers are given in the following table:) 72 343.91 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+5 9 Q
+(a.erase\050k\051) 78 654 T
+(size_type) 178.8 654 T
+7 10 Q
+(erases all the elements in the container) 272.4 653.33 T
+(with key equal to) 272.4 641.33 T
+5 9 Q
+(k) 344.06 641.33 T
+7 10 Q
+(.) 349.46 641.33 T
+(returns the number of erased elements.) 272.4 629.33 T
+5 9 Q
+(log\050size\050\051\051 +) 452.4 654 T
+(count\050k\051) 452.4 643 T
+(a.erase\050q\051) 78 610 T
+7 10 Q
+(result is not used) 178.8 610 T
+(erases the element pointed to by) 272.4 609.33 T
+5 9 Q
+(q) 403.49 609.33 T
+7 10 Q
+(.) 408.89 609.33 T
+(amortized constant) 452.4 609.33 T
+5 9 Q
+(a.erase\050q1, q2\051) 78 590 T
+7 10 Q
+(result is not used) 178.8 590 T
+-0.1 (erases all the elements in the range) 272.4 589.33 P
+5 9 Q
+-0.22 ([q1,) 413.61 589.33 P
+(q2\051) 272.4 577.33 T
+7 10 Q
+(.) 288.6 577.33 T
+5 9 Q
+(log\050size\050\051\051+ N) 452.4 589.33 T
+7 10 Q
+(where) 452.4 577.33 T
+5 9 Q
+(N) 479.33 577.33 T
+7 10 Q
+( is the dis-) 484.73 577.33 T
+-0.2 (tance from) 452.4 565.33 P
+5 9 Q
+-0.44 (q1) 497.53 565.33 P
+7 10 Q
+-0.2 ( to) 508.33 565.33 P
+5 9 Q
+-0.44 (q2) 520.7 565.33 P
+7 10 Q
+-0.2 (.) 531.5 565.33 P
+5 9 Q
+(a.find\050k\051) 78 546 T
+(iterator;) 178.8 546 T
+(const_iterator) 178.8 534.33 T
+7 10 Q
+(for constant) 178.8 522.33 T
+5 9 Q
+(a) 228.79 522.33 T
+7 10 Q
+(returns an iterator pointing to an element) 272.4 545.33 T
+(with the key equal to) 272.4 533.33 T
+5 9 Q
+(k) 358.78 533.33 T
+7 10 Q
+(, or) 364.18 533.33 T
+5 9 Q
+(a.end\050\051) 380.01 533.33 T
+7 10 Q
+( if) 417.81 533.33 T
+(such an element is not found.) 272.4 521.33 T
+(logarithmic) 452.4 545.33 T
+5 9 Q
+(a.count\050k\051) 78 502 T
+(size_type) 178.8 502 T
+7 10 Q
+(returns the number of elements with key) 272.4 501.33 T
+(equal to) 272.4 489.33 T
+5 9 Q
+(k) 306.84 489.33 T
+7 10 Q
+(.) 312.24 489.33 T
+5 9 Q
+(log\050size\050\051\051+) 452.4 502 T
+(count\050k\051) 452.4 491 T
+(a.equal_range\050k\051) 78 470 T
+(pair<iterator,) 178.8 470 T
+(iterator>;) 178.8 459 T
+(pair<const_iter) 178.8 448 T
+(ator,) 178.8 437 T
+(const_iterator>) 178.8 426 T
+7 10 Q
+(for constant) 178.8 414.33 T
+5 9 Q
+(a) 228.79 414.33 T
+7 10 Q
+(returns a pair where the first iterator) 272.4 469.33 T
+(points to the first element having key) 272.4 457.33 T
+-0.19 (equal to) 272.4 445.33 P
+5 F
+-0.45 ( k) 304.15 445.33 P
+7 F
+-0.19 (, and the second element being) 315.71 445.33 P
+-0.2 (the first element beyond all having key) 272.4 433.33 P
+5 F
+-0.48 (k) 429.6 433.33 P
+7 F
+-0.2 (.) 435.6 433.33 P
+(The range is empty if no elements have) 272.4 421.33 T
+(key) 272.4 409.33 T
+5 F
+( k) 286.84 409.33 T
+7 F
+(.) 298.84 409.33 T
+(logarithmic) 452.4 469.33 T
+6 12 Q
+(T) 88.33 320.57 T
+(able 2: Sorted associative container r) 95.23 320.57 T
+(equir) 283.99 320.57 T
+(ements \050in addition to base r) 311.11 320.57 T
+(equir) 456.56 320.57 T
+(ements\051) 483.68 320.57 T
+7 10 Q
+(expression) 101.01 289.91 T
+(return type) 197.8 289.91 T
+(assertion/note) 328.62 295.91 T
+(pre/post-condition) 319.73 283.91 T
+(complexity) 470.7 289.91 T
+5 9 Q
+(X::key_compare) 78 262.57 T
+(Compare) 178.8 262.57 T
+7 10 Q
+(defaults to) 272.4 261.91 T
+5 9 Q
+(less<key_type>.) 316.84 261.91 T
+7 10 Q
+(compile time) 452.4 261.91 T
+5 9 Q
+(X::value_compare) 78 242.57 T
+7 10 Q
+(a binary predicate) 178.8 241.91 T
+(type) 178.8 229.91 T
+-0.18 (is the same as) 272.4 241.91 P
+5 9 Q
+-0.4 (key_compare) 329.43 241.91 P
+7 10 Q
+-0.18 ( for) 388.83 241.91 P
+5 9 Q
+-0.4 (set) 405.13 241.91 P
+7 10 Q
+-0.18 ( and) 421.33 241.91 P
+5 9 Q
+(multiset) 272.4 229.91 T
+7 10 Q
+(;) 315.6 229.91 T
+-0.46 (is an ordering relation on pairs induced by) 272.4 217.91 P
+-0.2 (the \336rst component \050i.e.) 272.4 205.91 P
+5 9 Q
+-0.43 (Key) 369.37 205.91 P
+7 10 Q
+-0.2 (\051 for) 385.57 205.91 P
+5 9 Q
+-0.43 (map) 405.16 205.91 P
+7 10 Q
+-0.2 ( and) 421.36 205.91 P
+5 9 Q
+(multimap.) 272.4 193.91 T
+7 10 Q
+(compile time) 452.4 241.91 T
+5 9 Q
+(X\050c\051) 78 174.57 T
+(X a\050c\051;) 78 163.57 T
+7 10 Q
+(constructs an empty container;) 272.4 173.91 T
+(uses) 272.4 161.91 T
+5 9 Q
+(c) 292.12 161.91 T
+7 10 Q
+( as a comparison object.) 297.52 161.91 T
+(constant) 452.4 173.91 T
+5 9 Q
+(X\050\051) 78 142.57 T
+(X a;) 78 131.57 T
+7 10 Q
+(constructs an empty container;) 272.4 141.91 T
+(uses) 272.4 129.91 T
+5 9 Q
+(Compare\050\051) 292.12 129.91 T
+7 10 Q
+( as a comparison object.) 340.72 129.91 T
+(constant) 452.4 141.91 T
+6 12 Q
+(T) 106.78 712 T
+(able 1: Base r) 113.68 712 T
+(equir) 183.13 712 T
+(ements for associative container \050in addition to container\051) 210.25 712 T
+7 10 Q
+(expression) 101.01 681.33 T
+(return type) 197.8 681.33 T
+(assertion/note) 328.62 687.33 T
+(pre/post-condition) 319.73 675.33 T
+(complexity) 470.7 681.33 T
+72 701.75 72 402.25 2 L
+V
+0.5 H
+0 Z
+N
+172.8 702.25 172.8 401.75 2 L
+V
+N
+266.4 702.25 266.4 401.75 2 L
+V
+N
+446.4 702.25 446.4 401.75 2 L
+V
+N
+540 701.75 540 402.25 2 L
+V
+N
+71.75 702 540.25 702 2 L
+V
+N
+72.25 667.25 539.75 667.25 2 L
+V
+N
+72.25 664.75 539.75 664.75 2 L
+V
+N
+71.75 622 540.25 622 2 L
+V
+N
+71.75 602 540.25 602 2 L
+V
+N
+71.75 558 540.25 558 2 L
+V
+N
+71.75 514 540.25 514 2 L
+V
+N
+71.75 482 540.25 482 2 L
+V
+N
+71.75 402 540.25 402 2 L
+V
+N
+72 310.32 72 122.82 2 L
+V
+N
+172.8 310.82 172.8 122.32 2 L
+V
+N
+266.4 310.82 266.4 122.32 2 L
+V
+N
+446.4 310.82 446.4 122.32 2 L
+V
+N
+540 310.32 540 122.82 2 L
+V
+N
+71.75 310.57 540.25 310.57 2 L
+V
+N
+72.25 275.82 539.75 275.82 2 L
+V
+N
+72.25 273.32 539.75 273.32 2 L
+V
+N
+71.75 254.57 540.25 254.57 2 L
+V
+N
+71.75 186.57 540.25 186.57 2 L
+V
+N
+71.75 154.57 540.25 154.57 2 L
+V
+N
+71.75 122.57 540.25 122.57 2 L
+V
+N
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "3" 5
+%%Page: "4" 6
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(4) 303.5 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+0 X
+1.64 (The fundamental property of iterators of sorted associative containers is that they iterate through the) 72 236.33 P
+0.28 (containers in the non-descending order of keys, where non-descending is defined by the comparison that) 72 224.33 P
+-0.05 (was used to construct them. For any two dereferenceable iterators) 72 212.33 P
+5 9 Q
+-0.11 (i) 365.08 212.33 P
+3 10 Q
+-0.05 ( and) 370.48 212.33 P
+5 9 Q
+-0.11 (j) 392.32 212.33 P
+3 10 Q
+-0.05 ( such that distance from) 397.72 212.33 P
+5 9 Q
+-0.11 (i) 505.98 212.33 P
+3 10 Q
+-0.05 ( to) 511.38 212.33 P
+5 9 Q
+-0.11 (j) 525 212.33 P
+3 10 Q
+-0.05 ( is) 530.4 212.33 P
+(positive,) 72 200.33 T
+5 9 Q
+(value_comp\050*j, *i\051 == false) 108 178 T
+3 10 Q
+(For sorted associative containers with unique keys the stronger condition holds,) 72 159.33 T
+5 9 Q
+(value_comp\050*i, *j\051 == true.) 108 137 T
+8 10 Q
+(2.1.1 Set) 72 116.71 T
+5 9 Q
+1.11 (set) 72 99.85 P
+3 10 Q
+0.52 ( is a kind of sorted associative container that supports unique keys \050contains at most one of each key) 88.2 99.85 P
+(value\051 and provides for fast retrieval of the keys themselves.) 72 87.85 T
+5 9 Q
+(X\050i, j, c\051) 78 654 T
+(X a\050i, j, c\051;) 78 643 T
+7 10 Q
+(constructs an empty container and inserts) 272.4 653.33 T
+(elements from the range) 272.4 641.33 T
+5 9 Q
+([i, j\051) 371.82 641.33 T
+7 10 Q
+( into it;) 404.22 641.33 T
+(uses) 272.4 629.33 T
+5 9 Q
+(c) 292.12 629.33 T
+7 10 Q
+( as a comparison object.) 297.52 629.33 T
+5 9 Q
+(NlogN) 452.4 653.33 T
+7 10 Q
+( in general) 479.4 653.33 T
+(\050) 452.4 641.33 T
+5 9 Q
+(N) 455.73 641.33 T
+7 10 Q
+( is the distance) 461.13 641.33 T
+(from) 452.4 629.33 T
+5 9 Q
+(i) 474.34 629.33 T
+7 10 Q
+( to) 479.74 629.33 T
+5 9 Q
+(j) 492.52 629.33 T
+7 10 Q
+(\051;) 497.92 629.33 T
+(linear if) 452.4 617.33 T
+5 9 Q
+([i, j\051) 486.28 617.33 T
+7 10 Q
+( is) 518.68 617.33 T
+(sorted with) 452.4 605.33 T
+5 9 Q
+(value_comp\050\051) 452.4 593.33 T
+(X\050i, j\051) 78 574 T
+(X a\050i, j\051;) 78 563 T
+7 10 Q
+(same as above, but uses) 272.4 573.33 T
+5 9 Q
+(Compare\050\051) 370.16 573.33 T
+7 10 Q
+( as a) 418.76 573.33 T
+(comparison object.) 272.4 561.33 T
+(same as above) 452.4 573.33 T
+5 9 Q
+(a.key_comp\050\051) 78 542 T
+(X::key_compare) 178.8 542 T
+7 10 Q
+(returns the comparison object out of) 272.4 541.33 T
+(which) 272.4 529.33 T
+5 9 Q
+(a) 299.34 529.33 T
+7 10 Q
+( was constructed.) 304.74 529.33 T
+(constant) 452.4 541.33 T
+5 9 Q
+(a.value_comp\050\051) 78 510 T
+(X::value_compar) 178.8 510 T
+(e) 178.8 499 T
+7 10 Q
+(returns an object of) 272.4 509.33 T
+5 9 Q
+(value_compare) 352.38 509.33 T
+7 10 Q
+(constructed out of the comparison object.) 272.4 497.33 T
+(constant) 452.4 509.33 T
+5 9 Q
+(a.insert\050p, t\051) 78 478 T
+(iterator) 178.8 478 T
+7 10 Q
+-0.13 (inserts) 272.4 477.33 P
+5 9 Q
+-0.27 (t) 300.88 477.33 P
+7 10 Q
+-0.13 ( if and only if there is no element) 306.28 477.33 P
+(with key equal to the key of) 272.4 465.33 T
+5 9 Q
+(t) 386.55 465.33 T
+7 10 Q
+( in contain-) 391.95 465.33 T
+(ers with unique keys; always inserts) 272.4 453.33 T
+5 9 Q
+(t) 419.05 453.33 T
+7 10 Q
+( in) 424.45 453.33 T
+(containers with equal keys.) 272.4 441.33 T
+(always returns the iterator pointing to the) 272.4 429.33 T
+(element with key equal to the key of) 272.4 417.33 T
+5 9 Q
+(t) 420.71 417.33 T
+7 10 Q
+(.) 426.11 417.33 T
+(iterator) 272.4 405.33 T
+5 9 Q
+(p) 303.78 405.33 T
+7 10 Q
+( is a hint pointing to where the) 309.18 405.33 T
+(insert should start to search.) 272.4 393.33 T
+(logarithmic in gen-) 452.4 477.33 T
+(eral, but amortized) 452.4 465.33 T
+(constant if) 452.4 453.33 T
+5 9 Q
+(t) 496.84 453.33 T
+7 10 Q
+( is) 502.24 453.33 T
+(inserted right after) 452.4 441.33 T
+5 9 Q
+(p) 452.4 429.33 T
+7 10 Q
+(.) 457.8 429.33 T
+5 9 Q
+(a.lower_bound\050k\051) 78 374 T
+(iterator;) 178.8 374 T
+(const_iterator) 178.8 362.33 T
+7 10 Q
+(for constant) 178.8 350.33 T
+5 9 Q
+(a) 228.79 350.33 T
+7 10 Q
+(returns an iterator pointing to the \336rst ele-) 272.4 373.33 T
+(ment with key not less than) 272.4 361.33 T
+5 9 Q
+(k) 384.62 361.33 T
+7 10 Q
+(.) 390.02 361.33 T
+(logarithmic) 452.4 373.33 T
+5 9 Q
+(a.upper_bound\050k\051) 78 331 T
+7 10 Q
+(iterator;) 178.8 330.33 T
+5 9 Q
+(const_iterator) 178.8 318.33 T
+7 10 Q
+(for constant) 178.8 306.33 T
+5 9 Q
+(a) 228.79 306.33 T
+7 10 Q
+(returns an iterator pointing to the \336rst ele-) 272.4 330.33 T
+(ment with key greater than) 272.4 318.33 T
+5 9 Q
+(k) 382.1 318.33 T
+7 10 Q
+(.) 387.5 318.33 T
+(logarithmic) 452.4 330.33 T
+5 9 Q
+(a.equal_range\050k\051) 78 287 T
+7 10 Q
+(same as base) 178.8 286.33 T
+(requirements) 178.8 274.33 T
+(equivalent to) 272.4 286.33 T
+5 9 Q
+(make_pair\050a.lower_bound\050k\051,) 272.4 274.33 T
+(a.upper_bound\050k\051\051.) 272.4 262.33 T
+7 10 Q
+(logarithmic) 452.4 286.33 T
+6 12 Q
+(T) 88.33 712 T
+(able 2: Sorted associative container r) 95.23 712 T
+(equir) 283.99 712 T
+(ements \050in addition to base r) 311.11 712 T
+(equir) 456.56 712 T
+(ements\051) 483.68 712 T
+7 10 Q
+(expression) 101.01 681.33 T
+(return type) 197.8 681.33 T
+(assertion/note) 328.62 687.33 T
+(pre/post-condition) 319.73 675.33 T
+(complexity) 470.7 681.33 T
+72 701.75 72 255.25 2 L
+V
+0.5 H
+0 Z
+N
+172.8 702.25 172.8 254.75 2 L
+V
+N
+266.4 702.25 266.4 254.75 2 L
+V
+N
+446.4 702.25 446.4 254.75 2 L
+V
+N
+540 701.75 540 255.25 2 L
+V
+N
+71.75 702 540.25 702 2 L
+V
+N
+72.25 667.25 539.75 667.25 2 L
+V
+N
+72.25 664.75 539.75 664.75 2 L
+V
+N
+71.75 586 540.25 586 2 L
+V
+N
+71.75 554 540.25 554 2 L
+V
+N
+71.75 522 540.25 522 2 L
+V
+N
+71.75 490 540.25 490 2 L
+V
+N
+71.75 386 540.25 386 2 L
+V
+N
+71.75 343 540.25 343 2 L
+V
+N
+71.75 299 540.25 299 2 L
+V
+N
+71.75 255 540.25 255 2 L
+V
+N
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "4" 6
+%%Page: "5" 7
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(5) 303.5 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+5 9 Q
+0 X
+(template <class Key, class Compare = less<Key>,) 108 714 T
+(template <class U> class Allocator = allocator>) 180 703 T
+(class set {) 108 692 T
+(public:) 108 681 T
+(// typedefs:) 108 659 T
+(typedef Key key_type;) 144 637 T
+(typedef Key value_type;) 144 626 T
+(typedef Allocator<Key>::pointer pointer;) 144 615 T
+(typedef Allocator<Key>::reference reference;) 144 604 T
+(typedef Allocator<Key>::const_reference const_reference;) 144 593 T
+(typedef Compare key_compare;) 144 582 T
+(typedef Compare value_compare;) 144 571 T
+(typedef iterator;) 144 560 T
+(typedef iterator const_iterator;) 144 549 T
+(typedef size_type;) 144 538 T
+(typedef difference_type;) 144 527 T
+(typedef reverse_iterator;) 144 516 T
+(typedef const_reverse_iterator;) 144 505 T
+(// allocation/deallocation:) 108 483 T
+(set\050const Compare& comp = Compare\050\051\051;) 144 461 T
+(template <class InputIterator>) 144 450 T
+(set\050InputIterator first, InputIterator last,) 144 439 T
+(const Compare& comp = Compare\050\051\051;) 180 428 T
+(set\050const set<Key, Compare, Allocator>& x\051;) 144 417 T
+(~set\050\051;) 144 406 T
+(set<Key, Compare, Allocator>& operator=\050const set<Key, Compare,) 144 395 T
+(Allocator>& x\051;) 180 384 T
+(void swap\050set<Key, Compare, Allocator>& x\051;) 144 373 T
+(// accessors:) 108 351 T
+(key_compare key_comp\050\051 const;) 144 329 T
+(value_compare value_comp\050\051 const;) 144 318 T
+(iterator begin\050\051 const;) 144 307 T
+(iterator end\050\051 const;) 144 296 T
+(reverse_iterator rbegin\050\051;) 144 285 T
+(reverse_iterator rend\050\051;) 144 274 T
+(bool empty\050\051 const;) 144 263 T
+(size_type size\050\051 const;) 144 252 T
+(size_type max_size\050\051 const;) 144 241 T
+(// insert/erase:) 108 219 T
+(pair<iterator, bool> insert\050const value_type& x\051;) 144 197 T
+(iterator insert\050iterator position, const value_type& x\051;) 144 186 T
+(template <class InputIterator>) 144 175 T
+(void insert\050InputIterator first, InputIterator last\051;) 144 164 T
+(void erase\050iterator position\051;) 144 153 T
+(size_type erase\050const key_type& x\051;) 144 142 T
+(void erase\050iterator first, iterator last\051;) 144 131 T
+(// set operations:) 108 109 T
+(iterator find\050const key_type& x\051 const;) 144 87 T
+(size_type count\050const key_type& x\051 const;) 144 76 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "5" 7
+%%Page: "6" 8
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(6) 303.5 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+5 9 Q
+0 X
+(iterator lower_bound\050const key_type& x\051 const;) 144 714 T
+(iterator upper_bound\050const key_type& x\051 const;) 144 703 T
+(pair<iterator, iterator> equal_range\050const key_type& x\051 const;) 144 692 T
+(};) 108 681 T
+(template <class Key, class Compare, class Allocator>) 108 659 T
+(bool operator==\050const set<Key, Compare, Allocator>& x,) 108 648 T
+(const set<Key, Compare, Allocator>& y\051;) 180 637 T
+(template <class Key, class Compare, class Allocator>) 108 615 T
+(bool operator<\050const set<Key, Compare, Allocator>& x,) 108 604 T
+(const set<Key, Compare, Allocator>& y\051;) 180 593 T
+8.23 (iterator) 72 574.33 P
+3 10 Q
+3.81 ( is a constant bidirectional iterator referring to) 115.2 574.33 P
+5 9 Q
+8.23 (const value_type) 351.48 574.33 P
+3 10 Q
+3.81 (. The exact type is) 446.1 574.33 P
+(implementation dependent and determined by) 72 562.33 T
+5 9 Q
+(Allocator.) 281.98 562.33 T
+(const_iterator) 72 543.33 T
+3 10 Q
+( is the same type as) 147.6 543.33 T
+5 9 Q
+(iterator) 235.34 543.33 T
+3 10 Q
+(.) 278.54 543.33 T
+5 9 Q
+0.8 (size_type) 72 524.33 P
+3 10 Q
+0.37 ( is an unsigned integral type. The exact type is implementation dependent and determined by) 120.6 524.33 P
+5 9 Q
+(Allocator) 72 512.33 T
+3 10 Q
+(.) 120.6 512.33 T
+5 9 Q
+0.67 (difference_type) 72 493.33 P
+3 10 Q
+0.31 ( is a signed integral type. The exact type is implementation dependent and determined) 153 493.33 P
+(by) 72 481.33 T
+5 9 Q
+(Allocator) 85.59 481.33 T
+3 10 Q
+(.) 134.19 481.33 T
+8 F
+(2.1.2 Multiset) 72 460.71 T
+5 9 Q
+2.39 (multiset) 72 443.85 P
+3 10 Q
+1.11 ( is a kind of sorted associative container that supports equal keys \050possibly contains multiple) 115.2 443.85 P
+(copies of the same key value\051 and provides for fast retrieval of the keys themselves.) 72 431.85 T
+5 9 Q
+(template <class Key, class Compare = less<Key>,) 108 409.52 T
+(template <class U> class Allocator = allocator>) 180 398.52 T
+(class multiset {) 108 387.52 T
+(public:) 108 376.52 T
+(// typedefs:) 108 354.52 T
+(typedef Key key_type;) 144 332.52 T
+(typedef Key value_type;) 144 321.52 T
+(typedef Allocator<Key>::pointer pointer;) 144 310.52 T
+(typedef Allocator<Key>::reference reference;) 144 299.52 T
+(typedef Allocator<Key>::const_reference const_reference;) 144 288.52 T
+(typedef Compare key_compare;) 144 277.52 T
+(typedef Compare value_compare;) 144 266.52 T
+(typedef iterator;) 144 255.52 T
+(typedef iterator const_iterator;) 144 244.52 T
+(typedef size_type;) 144 233.52 T
+(typedef difference_type;) 144 222.52 T
+(typedef reverse_iterator;) 144 211.52 T
+(typedef const_reverse_iterator;) 144 200.52 T
+(// allocation/deallocation:) 108 178.52 T
+(multiset\050const Compare& comp = Compare\050\051\051;) 144 156.52 T
+(template <class InputIterator>) 144 145.52 T
+(multiset\050InputIterator first, InputIterator last,) 144 134.52 T
+(const Compare& comp = Compare\050\051\051;) 180 123.52 T
+(multiset\050const multiset<Key, Compare, Allocator>& x\051;) 144 112.52 T
+(~multiset\050\051;) 144 101.52 T
+-0.6 (multiset<Key, Compare, Allocator>& operator=\050const multiset<Key, Compare,) 144 90.52 P
+(Allocator>& x\051;) 180 79.52 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "6" 8
+%%Page: "7" 9
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(7) 303.5 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+5 9 Q
+0 X
+(void swap\050multiset<Key, Compare, Allocator>& x\051;) 144 714 T
+(// accessors:) 108 692 T
+(key_compare key_comp\050\051 const;) 144 670 T
+(value_compare value_comp\050\051 const;) 144 659 T
+(iterator begin\050\051 const;) 144 648 T
+(iterator end\050\051 const;) 144 637 T
+(reverse_iterator rbegin\050\051;) 144 626 T
+(reverse_iterator rend\050\051;) 144 615 T
+(bool empty\050\051 const;) 144 604 T
+(size_type size\050\051 const;) 144 593 T
+(size_type max_size\050\051 const;) 144 582 T
+(// insert/erase:) 108 560 T
+(iterator insert\050const value_type& x\051;) 144 538 T
+(iterator insert\050iterator position, const value_type& x\051;) 144 527 T
+(template <class InputIterator>) 144 516 T
+(void insert\050InputIterator first, InputIterator last\051;) 144 505 T
+(void erase\050iterator position\051;) 144 494 T
+(size_type erase\050const key_type& x\051;) 144 483 T
+(void erase\050iterator first, iterator last\051;) 144 472 T
+(// multiset operations:) 108 450 T
+(iterator find\050const key_type& x\051 const;) 144 428 T
+(size_type count\050const key_type& x\051 const;) 144 417 T
+(iterator lower_bound\050const key_type& x\051 const;) 144 406 T
+(iterator upper_bound\050const key_type& x\051 const;) 144 395 T
+(pair<iterator, iterator> equal_range\050const key_type& x\051 const;) 144 384 T
+(};) 108 373 T
+(template <class Key, class Compare, class Allocator>) 108 351 T
+(bool operator==\050const multiset<Key, Compare, Allocator>& x,) 108 340 T
+(const multiset<Key, Compare, Allocator>& y\051;) 180 329 T
+(template <class Key, class Compare, class Allocator>) 108 307 T
+(bool operator<\050const multiset<Key, Compare, Allocator>& x,) 108 296 T
+(const multiset<Key, Compare, Allocator>& y\051;) 180 285 T
+8.23 (iterator) 72 266.33 P
+3 10 Q
+3.81 ( is a constant bidirectional iterator referring to) 115.2 266.33 P
+5 9 Q
+8.23 (const value_type) 351.48 266.33 P
+3 10 Q
+3.81 (. The exact type is) 446.1 266.33 P
+(implementation dependent and determined by) 72 254.33 T
+5 9 Q
+(Allocator.) 281.98 254.33 T
+(const_iterator) 72 235.33 T
+3 10 Q
+( is the same type as) 147.6 235.33 T
+5 9 Q
+(iterator) 235.34 235.33 T
+3 10 Q
+(.) 278.54 235.33 T
+5 9 Q
+0.8 (size_type) 72 216.33 P
+3 10 Q
+0.37 ( is an unsigned integral type. The exact type is implementation dependent and determined by) 120.6 216.33 P
+5 9 Q
+(Allocator) 72 204.33 T
+3 10 Q
+(.) 120.6 204.33 T
+5 9 Q
+0.67 (difference_type) 72 185.33 P
+3 10 Q
+0.31 ( is a signed integral type. The exact type is implementation dependent and determined) 153 185.33 P
+(by) 72 173.33 T
+5 9 Q
+(Allocator) 85.59 173.33 T
+3 10 Q
+(.) 134.19 173.33 T
+8 F
+(2.1.3 Map) 72 152.71 T
+5 9 Q
+1.11 (map) 72 135.85 P
+3 10 Q
+0.52 ( is a kind of sorted associative container that supports unique keys \050contains at most one of each key) 88.2 135.85 P
+(value\051 and provides for fast retrieval of values of another type) 72 123.85 T
+5 9 Q
+(T) 348.96 123.85 T
+3 10 Q
+( based on the keys.) 354.36 123.85 T
+5 9 Q
+(template <class Key, class T, class Compare = less<Key>,) 108 101.52 T
+(template <class U> class Allocator = allocator>) 180 90.52 T
+(class map {) 108 79.52 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "7" 9
+%%Page: "8" 10
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(8) 303.5 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+5 9 Q
+0 X
+(public:) 108 714 T
+(// typedefs:) 108 692 T
+(typedef Key key_type;) 144 670 T
+(typedef pair<const Key, T> value_type;) 144 659 T
+(typedef Compare key_compare;) 144 648 T
+(class value_compare) 144 637 T
+(: public binary_function<) 180 626 T
+(value_type, value_type, bool> {) 315 626 T
+(friend class map;) 144 615 T
+(protected:) 144 604 T
+(Compare comp;) 180 593 T
+(value_compare\050Compare c\051 : comp\050c\051 {}) 180 582 T
+(public:) 144 571 T
+(bool operator\050\051\050const value_type& x, const value_type& y\051 {) 180 560 T
+(return comp\050x.first, y.first\051;) 216 549 T
+(}) 180 538 T
+(};) 144 527 T
+(typedef iterator;) 144 516 T
+(typedef const_iterator;) 144 505 T
+(typedef Allocator<value_type>::pointer pointer;) 144 494 T
+(typedef Allocator<value_type>::reference reference;) 144 483 T
+(typedef Allocator<value_type>::const_reference const_reference;) 144 472 T
+(typedef size_type;) 144 461 T
+(typedef difference_type;) 144 450 T
+(typedef reverse_iterator;) 144 439 T
+(typedef const_reverse_iterator;) 144 428 T
+(// allocation/deallocation:) 108 406 T
+(map\050const Compare& comp = Compare\050\051\051;) 144 384 T
+(template <class InputIterator>) 144 373 T
+(map\050InputIterator first, InputIterator last,) 144 362 T
+(const Compare& comp = Compare\050\051\051;) 180 351 T
+(map\050const map<Key, T, Compare, Allocator>& x\051;) 144 340 T
+(~map\050\051;) 144 329 T
+(map<Key, T, Compare, Allocator>&) 144 318 T
+(operator=\050const map<Key, T, Compare, Allocator>& x\051;) 180 307 T
+(void swap\050map<Key, T, Compare, Allocator>& x\051;) 144 296 T
+(// accessors:) 108 274 T
+(key_compare key_comp\050\051 const;) 144 252 T
+(value_compare value_comp\050\051 const;) 144 241 T
+(iterator begin\050\051;) 144 230 T
+(const_iterator begin\050\051 const;) 144 219 T
+(iterator end\050\051;) 144 208 T
+(const_iterator end\050\051 const;) 144 197 T
+(reverse_iterator rbegin\050\051;) 144 186 T
+(reverse_iterator rend\050\051;) 144 175 T
+(bool empty\050\051 const;) 144 164 T
+(size_type size\050\051 const;) 144 153 T
+(size_type max_size\050\051 const;) 144 142 T
+(Allocator<T>::reference operator[]\050const key_type& x\051;) 144 131 T
+(// insert/erase:) 108 109 T
+(pair<iterator, bool> insert\050const value_type& x\051;) 144 87 T
+(iterator insert\050iterator position, const value_type& x\051;) 144 76 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "8" 10
+%%Page: "9" 11
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(9) 303.5 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+5 9 Q
+0 X
+(template <class InputIterator>) 144 714 T
+(void insert\050InputIterator first, InputIterator last\051;) 144 703 T
+(void erase\050iterator position\051;) 144 692 T
+(size_type erase\050const key_type& x\051;) 144 681 T
+(void erase\050iterator first, iterator last\051;) 144 670 T
+(// map operations:) 108 648 T
+(iterator find\050const key_type& x\051;) 144 626 T
+(const_iterator find\050const key_type& x\051 const;) 144 615 T
+(size_type count\050const key_type& x\051 const;) 144 604 T
+(iterator lower_bound\050const key_type& x\051;) 144 593 T
+(const_iterator lower_bound\050const key_type& x\051 const;) 144 582 T
+(iterator upper_bound\050const key_type& x\051;) 144 571 T
+(const_iterator upper_bound\050const key_type& x\051 const;) 144 560 T
+(pair<iterator, iterator> equal_range\050const key_type& x\051;) 144 549 T
+-0.72 (pair<const_iterator, const_iterator> equal_range\050const key_type& x\051 const;) 144 538 P
+(};) 108 527 T
+(template <class Key, class T, class Compare, class Allocator>) 108 505 T
+(bool operator==\050const map<Key, T, Compare, Allocator>& x,) 108 494 T
+(const map<Key, T, Compare, Allocator>& y\051;) 180 483 T
+(template <class Key, class T, class Compare, class Allocator>) 108 461 T
+(bool operator<\050const map<Key, T, Compare, Allocator>& x,) 108 450 T
+(const map<Key, T, Compare, Allocator>& y\051;) 180 439 T
+0.5 (iterator) 72 420.33 P
+3 10 Q
+0.23 ( is a bidirectional iterator referring to) 115.2 420.33 P
+5 9 Q
+0.5 (value_type) 282.84 420.33 P
+3 10 Q
+0.23 (. The exact type is implementation dependent) 336.84 420.33 P
+(and determined by) 72 408.33 T
+5 9 Q
+(Allocator.) 158.88 408.33 T
+3.29 (const_iterator) 72 389.33 P
+3 10 Q
+1.52 ( is a constant bidirectional iterator referring to) 147.6 389.33 P
+5 9 Q
+3.29 (const value_type) 365.57 389.33 P
+3 10 Q
+1.52 (. The exact type is) 455.26 389.33 P
+0.37 (implementation dependent and determined by) 72 377.33 P
+5 9 Q
+0.8 (Allocator) 283.83 377.33 P
+3 10 Q
+0.37 (. It is guaranteed that there is a constructor for) 332.43 377.33 P
+5 9 Q
+(const_iterator) 72 365.33 T
+3 10 Q
+( out of) 147.6 365.33 T
+5 9 Q
+(iterator) 178.64 365.33 T
+3 10 Q
+(.) 221.84 365.33 T
+5 9 Q
+0.8 (size_type) 72 346.33 P
+3 10 Q
+0.37 ( is an unsigned integral type. The exact type is implementation dependent and determined by) 120.6 346.33 P
+5 9 Q
+(Allocator) 72 334.33 T
+3 10 Q
+(.) 120.6 334.33 T
+5 9 Q
+0.67 (difference_type) 72 315.33 P
+3 10 Q
+0.31 ( is a signed integral type. The exact type is implementation dependent and determined) 153 315.33 P
+(by) 72 303.33 T
+5 9 Q
+(Allocator) 85.59 303.33 T
+3 10 Q
+(.) 134.19 303.33 T
+2.64 (In addition to the standard set of member functions of sorted associative containers,) 72 284.33 P
+5 9 Q
+5.71 (map) 479.54 284.33 P
+3 10 Q
+2.64 ( provides) 495.73 284.33 P
+5 9 Q
+1.3 (reference operator[]\050const key_type&\051) 72 272.33 P
+3 10 Q
+0.6 (. For a map) 274.41 272.33 P
+5 9 Q
+1.3 (m) 329.13 272.33 P
+3 10 Q
+0.6 ( and key) 334.53 272.33 P
+5 9 Q
+1.3 (k) 376.68 272.33 P
+3 10 Q
+0.6 (,) 382.08 272.33 P
+5 9 Q
+1.3 (m[k]) 387.69 272.33 P
+3 10 Q
+0.6 ( is semantically equivalent to) 409.29 272.33 P
+5 9 Q
+(\050*\050\050m.insert\050make_pair\050k, T\050\051\051\051\051.first\051\051.second) 72 260.33 T
+3 10 Q
+(.) 325.8 260.33 T
+8 F
+(2.1.4 Multimap) 72 239.71 T
+5 9 Q
+2.39 (multimap) 72 222.85 P
+3 10 Q
+1.11 ( is a kind of sorted associative container that supports equal keys \050possibly contains multiple) 115.2 222.85 P
+(copies of the same key value\051 and provides for fast retrieval of values of another type) 72 210.85 T
+5 9 Q
+(T) 450.74 210.85 T
+3 10 Q
+( based on the keys.) 456.14 210.85 T
+5 9 Q
+(template <class Key, class T, class Compare = less<Key>,) 108 188.52 T
+(template <class U> class Allocator = allocator>) 180 177.52 T
+(class multimap {) 108 166.52 T
+(public:) 108 155.52 T
+(// typedefs:) 108 133.52 T
+(typedef Key key_type;) 144 111.52 T
+(typedef pair<const Key, T> value_type;) 144 100.52 T
+(typedef Compare key_compare;) 144 89.52 T
+(class value_compare) 144 78.52 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "9" 11
+%%Page: "10" 12
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(10) 301 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+5 9 Q
+0 X
+(: public binary_function<) 180 714 T
+(value_type, value_type, bool> {) 315 714 T
+(friend class multimap;) 144 703 T
+(protected:) 144 692 T
+(Compare comp;) 180 681 T
+(value_compare\050Compare c\051 : comp\050c\051 {}) 180 670 T
+(public:) 144 659 T
+(bool operator\050\051\050const value_type& x, const value_type& y\051 {) 180 648 T
+(return comp\050x.first, y.first\051;) 216 637 T
+(}) 180 626 T
+(};) 144 615 T
+(typedef iterator;) 144 604 T
+(typedef const_iterator;) 144 593 T
+(typedef Allocator<value_type>::pointer pointer;) 144 582 T
+(typedef Allocator<value_type>::reference reference;) 144 571 T
+(typedef Allocator<value_type>::const_reference const_reference;) 144 560 T
+(typedef size_type;) 144 549 T
+(typedef difference_type;) 144 538 T
+(typedef reverse_iterator;) 144 527 T
+(typedef const_reverse_iterator;) 144 516 T
+(// allocation/deallocation:) 108 494 T
+(multimap\050const Compare& comp = Compare\050\051\051;) 144 472 T
+(template <class InputIterator>) 144 461 T
+(multimap\050InputIterator first, InputIterator last,) 144 450 T
+(const Compare& comp = Compare\050\051\051;) 180 439 T
+(multimap\050const multimap<Key, T, Compare, Allocator>& x\051;) 144 428 T
+(~multimap\050\051;) 144 417 T
+(multimap<Key, T, Compare, Allocator>&) 144 406 T
+(operator=\050const multimap<Key, T, Compare, Allocator>& x\051;) 180 395 T
+(void swap\050multimap<Key, T, Compare, Allocator>& x\051;) 144 384 T
+(// accessors:) 108 362 T
+(key_compare key_comp\050\051 const;) 144 340 T
+(value_compare value_comp\050\051 const;) 144 329 T
+(iterator begin\050\051;) 144 318 T
+(const_iterator begin\050\051 const;) 144 307 T
+(iterator end\050\051;) 144 296 T
+(const_iterator end\050\051 const;) 144 285 T
+(reverse_iterator rbegin\050\051;) 144 274 T
+(reverse_iterator rend\050\051;) 144 263 T
+(bool empty\050\051 const;) 144 252 T
+(size_type size\050\051 const;) 144 241 T
+(size_type max_size\050\051 const;) 144 230 T
+(// insert/erase:) 108 208 T
+(iterator insert\050const value_type& x\051;) 144 186 T
+(iterator insert\050iterator position, const value_type& x\051;) 144 175 T
+(template <class InputIterator>) 144 164 T
+(void insert\050InputIterator first, InputIterator last\051;) 144 153 T
+(void erase\050iterator position\051;) 144 142 T
+(size_type erase\050const key_type& x\051;) 144 131 T
+(void erase\050iterator first, iterator last\051;) 144 120 T
+(// multimap operations:) 108 98 T
+(iterator find\050const key_type& x\051;) 144 76 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "10" 12
+%%Page: "11" 13
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(11) 301 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+5 9 Q
+0 X
+(const_iterator find\050const key_type& x\051 const;) 144 714 T
+(size_type count\050const key_type& x\051 const;) 144 703 T
+(iterator lower_bound\050const key_type& x\051;) 144 692 T
+(const_iterator lower_bound\050const key_type& x\051 const;) 144 681 T
+(iterator upper_bound\050const key_type& x\051;) 144 670 T
+(const_iterator upper_bound\050const key_type& x\051 const;) 144 659 T
+(pair<iterator, iterator> equal_range\050const key_type& x\051;) 144 648 T
+-0.72 (pair<const_iterator, const_iterator> equal_range\050const key_type& x\051 const;) 144 637 P
+(};) 108 626 T
+(template <class Key, class T, class Compare, class Allocator>) 108 604 T
+(bool operator==\050const multimap<Key, T, Compare, Allocator>& x,) 108 593 T
+(const multimap<Key, T, Compare, Allocator>& y\051;) 180 582 T
+(template <class Key, class T, class Compare, class Allocator>) 108 560 T
+(bool operator<\050const multimap<Key, T, Compare, Allocator>& x,) 108 549 T
+(const multimap<Key, T, Compare, Allocator>& y\051;) 180 538 T
+0.5 (iterator) 72 519.33 P
+3 10 Q
+0.23 ( is a bidirectional iterator referring to) 115.2 519.33 P
+5 9 Q
+0.5 (value_type) 282.84 519.33 P
+3 10 Q
+0.23 (. The exact type is implementation dependent) 336.84 519.33 P
+(and determined by) 72 507.33 T
+5 9 Q
+(Allocator.) 158.88 507.33 T
+0.74 (const_iterator) 72 488.33 P
+3 10 Q
+0.34 ( is the a constant bidirectional iterator referring to) 147.6 488.33 P
+5 9 Q
+0.74 (const value_type) 372.84 488.33 P
+3 10 Q
+0.34 (. The exact type is) 459.98 488.33 P
+0.37 (implementation dependent and determined by) 72 476.33 P
+5 9 Q
+0.8 (Allocator) 283.83 476.33 P
+3 10 Q
+0.37 (. It is guaranteed that there is a constructor for) 332.43 476.33 P
+5 9 Q
+(const_iterator) 72 464.33 T
+3 10 Q
+( out of) 147.6 464.33 T
+5 9 Q
+(iterator) 178.64 464.33 T
+3 10 Q
+(.) 221.84 464.33 T
+5 9 Q
+0.8 (size_type) 72 445.33 P
+3 10 Q
+0.37 ( is an unsigned integral type. The exact type is implementation dependent and determined by) 120.6 445.33 P
+5 9 Q
+(Allocator) 72 433.33 T
+3 10 Q
+(.) 120.6 433.33 T
+5 9 Q
+0.67 (difference_type) 72 414.33 P
+3 10 Q
+0.31 ( is a signed integral type. The exact type is implementation dependent and determined) 153 414.33 P
+(by) 72 402.33 T
+5 9 Q
+(Allocator) 85.59 402.33 T
+3 10 Q
+(.) 134.19 402.33 T
+0 11 Q
+(2.2 Hash Tables) 72 378.98 T
+3 10 Q
+-0.18 (The following table gives the requirements beyond the base requirements of Table 1 for hashed associative) 72 361.9 P
+1.07 (containers \050hash tables\051. In this table b is an integer of type size_type, and h is a hash function of type) 72 349.91 P
+(X::hash_type.) 72 337.91 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+6 12 Q
+(T) 129.6 314.57 T
+(able 3: Hash associative container \050in addition to base r) 136.5 314.57 T
+(equir) 419.29 314.57 T
+(ements) 446.41 314.57 T
+7 10 Q
+(expression) 101.01 283.91 T
+(return type) 197.8 283.91 T
+(assertion/note) 328.62 289.91 T
+(pre/post-condition) 319.73 277.91 T
+(complexity) 470.7 283.91 T
+5 9 Q
+(X::key_equal) 78 256.57 T
+(KeyEqual) 178.8 256.57 T
+7 10 Q
+(Type of the key equality function.  De-) 272.4 255.91 T
+(faults to) 272.4 243.91 T
+5 9 Q
+(equal_to<key_type>) 310.9 243.91 T
+7 10 Q
+(.) 408.1 243.91 T
+(compile time) 452.4 255.91 T
+5 9 Q
+(X::hasher) 78 224.57 T
+(Hasher) 178.8 224.57 T
+7 10 Q
+(Type of the hash function.  Defaults to) 272.4 223.91 T
+5 9 Q
+(hash<Key>) 272.4 211.91 T
+7 10 Q
+(compile time) 452.4 223.91 T
+5 9 Q
+(X\050\051) 78 192.57 T
+(X a;) 78 181.57 T
+7 10 Q
+(constructs an empty container;) 272.4 191.91 T
+(uses HashFunction\050\051 as the hash function) 272.4 179.91 T
+(and Compare\050\051 as the key comparison) 272.4 167.91 T
+(builds at least 1000 buckets.) 272.4 155.91 T
+(constant) 452.4 191.91 T
+5 9 Q
+(X\050b\051) 78 136.57 T
+(X a\050b\051;) 78 125.57 T
+7 10 Q
+-0.79 (constructs an empty container using above) 272.4 135.91 P
+-0.47 (defaults, except having space for) 272.4 123.91 P
+5 F
+-1.12 ( b) 401.88 123.91 P
+7 F
+-0.47 (buck-) 417.63 123.91 P
+(ets.) 272.4 111.91 T
+(constant) 452.4 135.91 T
+5 9 Q
+(X\050b, h\051) 78 92.57 T
+(X a\050b, h\051;) 78 81.57 T
+7 10 Q
+(as above, but uses h as the hash function.) 272.4 91.91 T
+(constant) 452.4 91.91 T
+72 304.32 72 72.82 2 L
+V
+0.5 H
+0 Z
+N
+172.8 304.82 172.8 72.32 2 L
+V
+N
+266.4 304.82 266.4 72.32 2 L
+V
+N
+446.4 304.82 446.4 72.32 2 L
+V
+N
+540 304.32 540 72.82 2 L
+V
+N
+71.75 304.57 540.25 304.57 2 L
+V
+N
+72.25 269.82 539.75 269.82 2 L
+V
+N
+72.25 267.32 539.75 267.32 2 L
+V
+N
+71.75 236.57 540.25 236.57 2 L
+V
+N
+71.75 204.57 540.25 204.57 2 L
+V
+N
+71.75 148.57 540.25 148.57 2 L
+V
+N
+71.75 104.57 540.25 104.57 2 L
+V
+N
+71.75 72.57 540.25 72.57 2 L
+V
+N
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "11" 13
+%%Page: "12" 14
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(12) 301 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+0 X
+1.82 (For hash tables, iteration through the table presents the keys in no particular order; the actual order) 72 161.33 P
+1.17 (depends on the order of insertion and on the hash function.  Table entries which have equal keys will) 72 149.33 P
+1.56 (appear consecutively when iterating through the table.  Iterators and references remain valid after all) 72 137.33 P
+(operations, including) 72 125.33 T
+5 9 Q
+(resize) 168.91 125.33 T
+3 10 Q
+(, but ranges such as the result of) 201.31 125.33 T
+5 9 Q
+( equal_range) 343.1 125.33 T
+3 10 Q
+(may no longer be valid.) 413.3 125.33 T
+0.23 (The bucket parameters to the constructors and the resize operation guide the implementation in selecting) 72 106.33 P
+-0.46 (the actual number of buckets being used. An implementation is free to choose more. The number of buckets) 72 94.33 P
+-0.03 (in use for a table may change any time elements are inserted or deleted from the table. The resize\050buckets\051) 72 82.33 P
+5 9 Q
+(X\050b, h, c\051) 78 654 T
+(X a\050b, h, c\051) 78 643 T
+7 10 Q
+(constructs an empty container;) 272.4 653.33 T
+-0.71 (uses h as the hash function and c as the key) 272.4 641.33 P
+(comparison) 272.4 629.33 T
+(constant) 452.4 653.33 T
+5 9 Q
+(X\050i, j\051) 78 610 T
+(X\050i, j, b\051) 78 599 T
+(X\050i, j, b, h\051) 78 588 T
+(X\050i, j, b, h, c\051) 78 577 T
+(X a\050i,j\051;) 78 566 T
+(X a\050i, j, b\051;) 78 555 T
+(X a\050i, j, b, h\051;) 78 544 T
+(X a\050i,j,b,h,c\051;) 78 533 T
+7 10 Q
+(constructs an empty container and inserts) 272.4 609.33 T
+(elements from the range) 272.4 597.33 T
+5 F
+( [i,j\051) 369.32 597.33 T
+7 F
+(into it.) 411.32 597.33 T
+(Uses) 272.4 585.33 T
+5 F
+( b, h, c) 291.84 585.33 T
+7 F
+(as described above, or) 345.84 585.33 T
+(defaluts) 272.4 573.33 T
+(w) 307.39 573.33 T
+(hen they are not provided.) 313.78 573.33 T
+-1.12 (N, the distance from) 452.4 609.33 P
+5 F
+(i) 452.4 597.33 T
+7 F
+( to) 458.4 597.33 T
+5 F
+( j) 468.68 597.33 T
+7 F
+(.) 480.68 597.33 T
+5 9 Q
+(a::hash_funct\050\051) 78 514 T
+(X::hasher) 178.8 514 T
+7 10 Q
+(returns the hashing function) 272.4 513.33 T
+(compile time) 452.4 513.33 T
+5 9 Q
+(a::key_eq\050\051) 78 494 T
+(X::key_equal) 178.8 494 T
+7 10 Q
+(returns the key comparison function) 272.4 493.33 T
+(compile time) 452.4 493.33 T
+5 9 Q
+(a_uniq.insert\050t\051) 78 474 T
+(pair<iterator,) 178.8 474 T
+(bool>) 178.8 463 T
+7 10 Q
+(same as base requirements) 272.4 473.33 T
+(amortized constant) 452.4 473.33 T
+5 9 Q
+(a_eq.insert\050t\051) 78 444 T
+(iterator) 178.8 444 T
+7 10 Q
+(same as base requirements) 272.4 443.33 T
+(amortized constant) 452.4 443.33 T
+5 9 Q
+(a.insert\050i,j\051) 78 424 T
+7 10 Q
+(result is not used) 178.8 423.33 T
+(same as base requirements) 272.4 423.33 T
+-1.12 (N, the distance from) 452.4 423.33 P
+5 F
+(i) 452.4 411.33 T
+7 F
+( to) 458.4 411.33 T
+5 F
+( j) 468.68 411.33 T
+7 F
+(.) 480.68 411.33 T
+5 9 Q
+(a.erase\050k\051) 78 392 T
+(size_type) 178.8 392 T
+7 10 Q
+(same as base requirements) 272.4 391.33 T
+5 9 Q
+(count\050k\051) 452.4 392 T
+(a.erase\050q1, q2\051) 78 372 T
+7 10 Q
+(result is not used) 178.8 371.33 T
+-0.69 (erases all the elements in the range) 272.4 371.33 P
+5 F
+-1.65 ( [q1,) 407.69 371.33 P
+(q2\051) 272.4 359.33 T
+7 F
+-1.12 (N, the distance from) 452.4 371.33 P
+5 F
+(q1) 452.4 359.33 T
+7 F
+(to) 470.4 359.33 T
+5 F
+( q2) 478.18 359.33 T
+7 F
+(.) 496.18 359.33 T
+5 9 Q
+(a.f) 78 340 T
+(ind\050k\051) 94.2 340 T
+7 10 Q
+(as in base require-) 178.8 339.33 T
+(ments) 178.8 327.33 T
+(as in base requirements) 272.4 339.33 T
+(constant) 452.4 339.33 T
+5 9 Q
+(a.equal_range\050k\051) 78 308 T
+7 10 Q
+(as inbase require-) 178.8 307.33 T
+(ments) 178.8 295.33 T
+(as in base requirements) 272.4 307.33 T
+(N, the number of) 452.4 307.33 T
+(elements having) 452.4 295.33 T
+(key) 452.4 283.33 T
+5 F
+( k) 466.84 283.33 T
+7 F
+(.) 478.84 283.33 T
+5 9 Q
+(a.count\050k\051) 78 264 T
+(size_type) 178.8 264 T
+7 10 Q
+(returns the number of elements with key) 272.4 263.33 T
+(equal to) 272.4 251.33 T
+5 F
+(k) 306.84 251.33 T
+7 F
+(.) 312.84 251.33 T
+5 9 Q
+(count\050k\051) 452.4 264 T
+(bucket_count\050\051) 78 232 T
+(size_type) 178.8 232 T
+7 10 Q
+(returns the current  number of hash buck-) 272.4 231.33 T
+(ets) 272.4 219.33 T
+(constant) 452.4 231.33 T
+5 9 Q
+(resize\050b\051) 78 200 T
+7 10 Q
+(result is not used) 178.8 199.33 T
+(restructures the table to contain) 272.4 199.33 T
+5 F
+( b) 397.93 199.33 T
+7 F
+(buck-) 415.93 199.33 T
+(ets.) 272.4 187.33 T
+(linear) 452.4 199.33 T
+6 12 Q
+(T) 129.6 712 T
+(able 3: Hash associative container \050in addition to base r) 136.5 712 T
+(equir) 419.29 712 T
+(ements) 446.41 712 T
+7 10 Q
+(expression) 101.01 681.33 T
+(return type) 197.8 681.33 T
+(assertion/note) 328.62 687.33 T
+(pre/post-condition) 319.73 675.33 T
+(complexity) 470.7 681.33 T
+72 701.75 72 180.25 2 L
+V
+0.5 H
+0 Z
+N
+172.8 702.25 172.8 179.75 2 L
+V
+N
+266.4 702.25 266.4 179.75 2 L
+V
+N
+446.4 702.25 446.4 179.75 2 L
+V
+N
+540 701.75 540 180.25 2 L
+V
+N
+71.75 702 540.25 702 2 L
+V
+N
+72.25 667.25 539.75 667.25 2 L
+V
+N
+72.25 664.75 539.75 664.75 2 L
+V
+N
+71.75 622 540.25 622 2 L
+V
+N
+71.75 526 540.25 526 2 L
+V
+N
+71.75 506 540.25 506 2 L
+V
+N
+71.75 486 540.25 486 2 L
+V
+N
+71.75 456 540.25 456 2 L
+V
+N
+71.75 436 540.25 436 2 L
+V
+N
+71.75 404 540.25 404 2 L
+V
+N
+71.75 384 540.25 384 2 L
+V
+N
+71.75 352 540.25 352 2 L
+V
+N
+71.75 320 540.25 320 2 L
+V
+N
+71.75 276 540.25 276 2 L
+V
+N
+71.75 244 540.25 244 2 L
+V
+N
+71.75 212 540.25 212 2 L
+V
+N
+71.75 180 540.25 180 2 L
+V
+N
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "12" 14
+%%Page: "13" 15
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(13) 301 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+0 X
+0.11 (member function can be issued to change the bucket count at a time when the program can accommodate) 72 713.33 P
+(the overhead of table restructuring.) 72 701.33 T
+1.18 (The hash function is expected to accept a single parameter, the key, and return a number in the range) 72 682.33 P
+1.09 (defined by) 72 670.33 P
+2 8 Q
+0.97 ( size_type) 120.54 670.33 P
+3 10 Q
+1.09 (. The ability of the implementation to achieve constant performance depends on the) 157.53 670.33 P
+(ability of the hashing function to map key values across the unsigned integers.) 72 658.33 T
+8 F
+(2.2.1 Hash Function) 72 637.71 T
+3 F
+-0.51 (Each implementation will provide a default hash function, a subclass of) 72 620.85 P
+5 9 Q
+-1.1 ( unary_function<T, size_type>) 383.11 620.85 P
+3 10 Q
+-0.51 (,) 537.5 620.85 P
+(where T is the key type.) 72 608.85 T
+5 9 Q
+(template <class T> class hash: unary_function<T, size_type>{) 108 586.52 T
+(size_type operator\050\051 \050const T & key\051;) 144 575.52 T
+(};) 108 564.52 T
+3 10 Q
+(This shall be defined at least for the numeric types and) 72 545.85 T
+5 9 Q
+(string) 316.29 545.85 T
+3 10 Q
+(.) 348.69 545.85 T
+8 F
+(2.2.2 Hash_set) 72 525.23 T
+3 F
+0.79 (hash_set is a kind of hash table that supports unique keys \050contains at most one of each key value\051 and) 72 508.37 P
+(provides for fast retrieval of the keys themselves.) 72 496.37 T
+5 9 Q
+(template <class Key, class Hasher=hash<Key>, class KeyEqual = equal_to<Key>,) 108 466.04 T
+(          template <class U> class Allocator = allocator>) 108 455.04 T
+(class hash_set {) 108 444.04 T
+(public:) 108 433.04 T
+(// typedefs:) 108 411.04 T
+(    typedef Key key_type;) 108 389.04 T
+(    typedef Key value_type;) 108 378.04 T
+(    typedef Hasher hasher;) 108 367.04 T
+(    typedef KeyEqual key_equal;) 108 356.04 T
+(    typedef pointer;) 108 334.04 T
+(    typedef reference;) 108 323.04 T
+(    typedef const_reference;) 108 312.04 T
+(    typedef iterator;) 108 301.04 T
+(    typedef iterator const_iterator;) 108 290.04 T
+(    typedef size_type;) 108 279.04 T
+(    typedef difference_type;) 108 268.04 T
+(// allocation/deallocation) 108 246.04 T
+(    hash_set\050size_type table_size = 1007,) 108 224.04 T
+(const Hasher& hf = Hasher\050\051,) 180 213.04 T
+(const KeyEqual& equal = KeyEqual\050\051\051;) 180 202.04 T
+(    template <class InputIterator>) 108 191.04 T
+(    hash_set\050InputIterator first, InputIterator last,) 108 180.04 T
+(size_type table_size = 10007,) 180 169.04 T
+(const Hasher& hf = Hasher\050\051,) 180 158.04 T
+(const KeyEqual& equal = KeyEqual\050\051\051;) 180 147.04 T
+(    ~hash_set\050\051;) 108 136.04 T
+(// copying, assignment, swap) 108 114.04 T
+(    hash_set\050const hash_set<Key, Hasher, KeyEqual, Allocator>& x\051;) 108 92.04 T
+(    hash_set<Key, Hasher, KeyEqual, Allocator>&) 108 81.04 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "13" 15
+%%Page: "14" 16
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(14) 301 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+5 9 Q
+0 X
+(       operator=\050const hash_set<Key, Hasher, KeyEqual, Allocator>& x\051;) 108 714 T
+(    void swap\050hash_set<Key, Hasher, KeyEqual, Allocator>& x\051;) 108 703 T
+(// accessors:) 108 681 T
+(    key_equal key_eq\050\051 const;) 108 659 T
+(    hasher hash_funct\050\051 const;) 108 648 T
+(    iterator begin\050\051 const;) 108 637 T
+(    iterator end\050\051 const;) 108 626 T
+(    bool empty\050\051 const;) 108 615 T
+(    size_type size\050\051 const;) 108 604 T
+(    size_type max_size\050\051 const;) 108 593 T
+(// insert/erase) 108 571 T
+(    pair<iterator, bool> insert\050const value_type& x\051;) 108 549 T
+(    template <class InputIterator>) 108 538 T
+(    void insert\050InputIterator first, InputIterator last\051;) 108 527 T
+(    void erase\050iterator position\051;) 108 516 T
+(    size_type erase\050const key_type& x\051;) 108 505 T
+(    void erase\050iterator first, iterator last\051;) 108 494 T
+(// search operations:) 108 472 T
+(    iterator find\050const key_type& x\051 const;) 108 450 T
+(    size_type count\050const key_type& x\051 const;) 108 439 T
+(    pair<iterator, iterator> equal_range\050const key_type& x\051 const;) 108 428 T
+(// hash table size operations) 108 406 T
+(    size_type bucket_count\050\051 const;) 108 384 T
+(    void resize\050size_type buckets\051;) 108 373 T
+(};) 108 362 T
+(template <class Key, class Hasher, class KeyEqual, Allocator>) 108 340 T
+(bool operator==\050const hash_set<Key, Hasher, KeyEqual, Allocator>& x,) 108 329 T
+(const hash_set<Key, Hasher, KeyEqual, Allocator>& y\051;) 190.8 318 T
+(iterator) 72 288.33 T
+3 10 Q
+( is a constant forward iterator referring to) 115.2 288.33 T
+5 9 Q
+( const value_type) 298.64 288.33 T
+3 10 Q
+(. The exact type is) 390.44 288.33 T
+(implementation dependent and determined by) 72 276.33 T
+5 9 Q
+( Allocator) 279.48 276.33 T
+3 10 Q
+(.) 333.48 276.33 T
+5 9 Q
+(const_iterator) 72 257.33 T
+3 10 Q
+(is the same type as) 153 257.33 T
+5 9 Q
+( iterator) 235.74 257.33 T
+3 10 Q
+(.) 284.34 257.33 T
+8 F
+(2.2.3 Hash_multiset) 72 236.71 T
+5 9 Q
+1.05 (hash_multiset) 72 219.85 P
+3 10 Q
+0.49 ( is a kind of hash table that supports equal keys \050possibly contains multiple copies of the) 142.2 219.85 P
+(same key value\051 and provides for fast retrieval of the keys themselves.) 72 207.85 T
+5 9 Q
+(template <class Key, class Hasher=hash<Key>, class KeyEqual = equal_to<Key>,) 108 185.52 T
+(          template <class U> class Allocator = allocator>) 108 174.52 T
+(class hash_multiset {) 108 163.52 T
+(public:) 108 152.52 T
+(// typedefs:) 108 130.52 T
+(    typedef Key key_type;) 108 108.52 T
+(    typedef Key value_type;) 108 97.52 T
+(    typedef Hasher hasher;) 108 86.52 T
+(    typedef KeyEqual key_equal;) 108 75.52 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "14" 16
+%%Page: "15" 17
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(15) 301 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+5 9 Q
+0 X
+(    typedef pointer;) 108 703 T
+(    typedef reference;) 108 692 T
+(    typedef const_reference;) 108 681 T
+(    typedef iterator;) 108 670 T
+(    typedef iterator const_iterator;) 108 659 T
+(    typedef size_type;) 108 648 T
+(    typedef difference_type;) 108 637 T
+(// allocation/deallocation) 108 615 T
+(    hash_multiset\050size_type table_size = 1007,) 108 593 T
+(const Hasher& hf = Hasher\050\051,) 216 582 T
+(const KeyEqual& equal = KeyEqual\050\051\051;) 216 571 T
+(    template <class InputIterator>) 108 560 T
+(    hash_multiset\050InputIterator first, InputIterator last,) 108 549 T
+(size_type table_size = 10007,) 216 538 T
+(const Hasher& hf = Hasher\050\051,) 216 527 T
+(const KeyEqual& equal = KeyEqual\050\051\051;) 216 516 T
+(    ~hash_multiset\050\051;) 108 505 T
+(// copying, assignment, swap) 108 483 T
+(    hash_multiset\050const hash_multiset<Key, Hasher, KeyEqual, Allocator>& x\051;) 108 461 T
+(    hash_multiset<Key, Hasher, KeyEqual, Allocator>&) 108 450 T
+(       operator=\050const hash_multiset<Key, Hasher, KeyEqual, Allocator>& x\051;) 108 439 T
+(    void swap\050hash_multiset<Key, Hasher, KeyEqual, Allocator>& x\051;) 108 428 T
+(// accessors:) 108 406 T
+(    key_equal key_eq\050\051 const;) 108 384 T
+(    hasher hash_funct\050\051 const;) 108 373 T
+(    iterator begin\050\051 const;) 108 362 T
+(    iterator end\050\051 const;) 108 351 T
+(    bool empty\050\051 const;) 108 340 T
+(    size_type size\050\051 const;) 108 329 T
+(    size_type max_size\050\051 const;) 108 318 T
+(// insert/erase) 108 296 T
+(    iterator insert\050const value_type& x\051;) 108 274 T
+(    template <class InputIterator>) 108 263 T
+(    void insert\050InputIterator first, InputIterator last\051;) 108 252 T
+(    void erase\050iterator position\051;) 108 241 T
+(    size_type erase\050const key_type& x\051;) 108 230 T
+(    void erase\050iterator first, iterator last\051;) 108 219 T
+(// search operations:) 108 197 T
+(    iterator find\050const key_type& x\051 const;) 108 175 T
+(    size_type count\050const key_type& x\051 const;) 108 164 T
+(    pair<iterator, iterator> equal_range\050const key_type& x\051 const;) 108 153 T
+(// hash table size operations) 108 131 T
+(    size_type bucket_count\050\051 const;) 108 109 T
+(    void resize\050size_type buckets\051;) 108 98 T
+(};) 108 87 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "15" 17
+%%Page: "16" 18
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(16) 301 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+5 9 Q
+0 X
+(template <class Key, class Hasher, class KeyEqual, Allocator>) 108 714 T
+(bool operator==\050const hash_multiset<Key, Hasher, KeyEqual, Allocator>& x,) 108 703 T
+(const hash_multiset<Key, Hasher, KeyEqual, Allocator>& y\051;) 190.8 692 T
+-0.63 (iterator) 72 651.33 P
+3 10 Q
+-0.29 (is a constant forward iterator referring to) 119.97 651.33 P
+5 9 Q
+-0.63 ( const value_type) 299.16 651.33 P
+3 10 Q
+-0.29 (. The exact type is implementation) 389.7 651.33 P
+(dependent and determined by) 72 639.33 T
+5 9 Q
+( Allocator) 206.38 639.33 T
+3 10 Q
+(.) 260.38 639.33 T
+5 9 Q
+(const_iterator) 72 620.33 T
+3 10 Q
+(is the same type as) 153 620.33 T
+5 9 Q
+( iterator) 235.74 620.33 T
+3 10 Q
+(.) 284.34 620.33 T
+5 9 Q
+-0.03 (size_type) 72 601.33 P
+3 10 Q
+-0.01 (is an unsigned integral type. The exact type is implementation dependent and determined by) 125.97 601.33 P
+5 9 Q
+(Allocator) 72 589.33 T
+3 10 Q
+(.) 120.6 589.33 T
+5 9 Q
+-0.19 (difference_type) 72 570.33 P
+3 10 Q
+-0.09 (is a signed integral type. The exact type is implementation dependent and determined) 158.21 570.33 P
+(by) 72 558.33 T
+5 9 Q
+( Allocator) 83.09 558.33 T
+3 10 Q
+(.) 137.09 558.33 T
+8 F
+(2.2.4 Hash_map) 72 537.71 T
+3 F
+0.39 (hash_map is a kind of hash table that supports unique keys \050contains at most one of each key value\051 and) 72 520.85 P
+(provides for fast retrieval of values of another type T based on the keys.) 72 508.85 T
+5 9 Q
+(template <class Key, class Hasher=hash<Key>, class KeyEqual = equal_to<Key>,) 108 486.52 T
+(          template <class U> class Allocator = allocator>) 108 475.52 T
+(class hash_map {) 108 464.52 T
+(public:) 108 453.52 T
+(// typedefs:) 108 431.52 T
+(    typedef Key key_type;) 108 409.52 T
+(    typedef pair<const Key, T> value_type;) 108 398.52 T
+(    typedef Hasher hasher;) 108 387.52 T
+(    typedef KeyEqual key_equal;) 108 376.52 T
+(    typedef pointer;) 108 354.52 T
+(    typedef reference;) 108 343.52 T
+(    typedef const_reference;) 108 332.52 T
+(    typedef iterator;) 108 321.52 T
+(    typedef const_iterator;) 108 310.52 T
+(    typedef size_type;) 108 299.52 T
+(    typedef difference_type;) 108 288.52 T
+(// allocation/deallocation) 108 266.52 T
+(    hash_map\050size_type table_size = 1007,) 108 244.52 T
+(const Hasher& hf = Hasher\050\051,) 180 233.52 T
+(const KeyEqual& equal = KeyEqual\050\051\051;) 180 222.52 T
+(    template <class InputIterator>) 108 211.52 T
+(    hash_map\050InputIterator first, InputIterator last,) 108 200.52 T
+(size_type table_size = 10007,) 180 189.52 T
+(const Hasher& hf = Hasher\050\051\051;) 180 178.52 T
+(    ~hash_map\050\051;) 108 167.52 T
+(// copying, assignment, swap) 108 145.52 T
+(    hash_map\050const hash_map<Key, T, Hasher, KeyEqual, Allocator>& x\051;) 108 123.52 T
+(    hash_map<Key,T,Hasher,KeyEqual, Allocator>&) 108 112.52 T
+(      operator=\050const hash_map<Key, T, Hasher, KeyEqual, Allocator>& x\051;) 108 101.52 T
+(    void swap\050hash_map<Key, T, Hasher, KeyEqual, Allocator>& x\051;) 108 90.52 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "16" 18
+%%Page: "17" 19
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(17) 301 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+5 9 Q
+0 X
+(// accessors:) 108 714 T
+(    key_equal key_eq\050\051 const;) 108 692 T
+(    hasher hash_funct\050\051 const;) 108 681 T
+(    iterator begin\050\051;) 108 670 T
+(    const_iterator begin\050\051 const;) 108 659 T
+(    iterator end\050\051;) 108 648 T
+(    const_iterator end\050\051 const;) 108 637 T
+(    bool empty\050\051 const;) 108 626 T
+(    size_type size\050\051 const;) 108 615 T
+(    size_type max_size\050\051 const;) 108 604 T
+(    Allocator<T>::reference operator[]\050const key_type& k\051;) 108 593 T
+(// insert/erase) 108 571 T
+(    pair<iterator, bool> insert\050const value_type& x\051;) 108 549 T
+(    template <class InputIterator>) 108 538 T
+(    void insert\050InputIterator first, InputIterator last\051;) 108 527 T
+(    void erase\050iterator position\051;) 108 516 T
+(    size_type erase\050const key_type& x\051;) 108 505 T
+(    void erase\050iterator first, iterator last\051;) 108 494 T
+(// search operations:) 108 472 T
+(    iterator find\050const key_type& x\051;) 108 450 T
+(    const_iterator find\050const key_type& x\051 const;) 108 439 T
+(    size_type count\050const key_type& x\051 const;) 108 428 T
+(    pair<iterator, iterator> equal_range\050const key_type& x\051;) 108 417 T
+(    pair<const_iterator, const_iterator> equal_range\050const key_type& x\051 const;) 108 406 T
+(// hash table size operations) 108 384 T
+(    size_type bucket_count\050\051 const;) 108 362 T
+(    void resize\050size_type buckets\051;) 108 351 T
+(};) 108 340 T
+(template <class Key, class T, class Hasher, class KeyEqual, Allocator>) 108 318 T
+(bool operator==\050const hash_map<Key, T, Hasher, KeyEqual, Allocator>& x,) 108 307 T
+(const hash_map<Key, T, Hasher, KeyEqual, Allocator>& y\051;) 190.8 296 T
+-0.31 (iterator) 72 277.33 P
+3 10 Q
+-0.14 (is a forward iterator referring to) 120.29 277.33 P
+5 9 Q
+-0.31 ( value_type) 260.72 277.33 P
+3 10 Q
+-0.14 (. The exact type is implementation dependent and) 319.81 277.33 P
+(determined by) 72 265.33 T
+5 9 Q
+( Allocator) 136.95 265.33 T
+3 10 Q
+(.) 190.95 265.33 T
+5 9 Q
+4.67 (const_iterator) 72 246.33 P
+3 10 Q
+2.16 (is a constant forward iterator referring to) 157.67 246.33 P
+5 9 Q
+4.67 ( const value_type) 351.57 246.33 P
+3 10 Q
+2.16 (. The exact type is) 452.7 246.33 P
+-0.01 (implementation dependent and determined by) 72 234.33 P
+5 9 Q
+-0.03 ( Allocator) 279.42 234.33 P
+3 10 Q
+-0.01 (. It is guaranteed that there is a constructor for) 333.4 234.33 P
+5 9 Q
+(const_iterator) 72 222.33 T
+3 10 Q
+( out of) 147.6 222.33 T
+5 9 Q
+( iterator) 176.14 222.33 T
+3 10 Q
+(.) 224.74 222.33 T
+5 9 Q
+0.33 (size_type) 72 203.33 P
+3 10 Q
+0.15 (is an unsigned integral type. The exact type is implementation dependent and determined by) 126.33 203.33 P
+5 9 Q
+(Allocator) 72 191.33 T
+3 10 Q
+(.) 120.6 191.33 T
+5 9 Q
+0.17 (difference_type) 72 172.33 P
+3 10 Q
+0.08 (is a signed integral type. The exact type is implementation dependent and determined) 158.57 172.33 P
+(by) 72 160.33 T
+5 9 Q
+( Allocator) 83.09 160.33 T
+3 10 Q
+(.) 137.09 160.33 T
+(In addition to the standard set of member functions of hash tables,) 72 141.33 T
+5 9 Q
+( hash_map) 365.36 141.33 T
+3 10 Q
+(provides) 419.36 141.33 T
+5 9 Q
+3.28 (Allocator<T>::reference operator[]\050const key_type&\051) 72 129.33 P
+3 10 Q
+1.52 (. For a) 353.96 129.33 P
+5 9 Q
+3.28 (hash_map m) 388.48 129.33 P
+3 10 Q
+1.52 ( and key) 445.76 129.33 P
+5 9 Q
+3.28 ( k) 486.64 129.33 P
+3 10 Q
+1.52 (,) 500.71 129.33 P
+5 9 Q
+3.28 (m[k]) 507.23 129.33 P
+3 10 Q
+1.52 ( is) 528.83 129.33 P
+(semantically equivalent to) 72 117.33 T
+5 9 Q
+(\050*\050\050m.insert\050make_pair\050k, T\050\051\051\051\051.first\051\051.second) 190.65 117.33 T
+3 10 Q
+(.) 444.45 117.33 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "17" 19
+%%Page: "18" 20
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(18) 301 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+8 F
+0 X
+(2.2.5 Hash_multimap) 72 712.71 T
+5 9 Q
+0.61 (hash_multimap) 72 695.85 P
+3 10 Q
+0.28 (is a kind of hash table that supports equal keys \050possibly contains multiple copies of the) 148.21 695.85 P
+(same key value\051 and provides for fast retrieval of values of another type T based on the keys.) 72 683.85 T
+5 9 Q
+(template <class Key, class Hasher=hash<Key>, class KeyEqual = equal_to<Key>,) 108 661.52 T
+(          template <class U> class Allocator = allocator>) 108 650.52 T
+(class hash_multimap {) 108 639.52 T
+(public:) 108 628.52 T
+(// typedefs:) 108 606.52 T
+(    typedef Key key_type;) 108 584.52 T
+(    typedef pair<const Key, T> value_type;) 108 573.52 T
+(    typedef Hasher hasher;) 108 562.52 T
+(    typedef KeyEqual key_equal;) 108 551.52 T
+(    typedef pointer;) 108 529.52 T
+(    typedef reference;) 108 518.52 T
+(    typedef const_reference;) 108 507.52 T
+(    typedef iterator;) 108 496.52 T
+(    typedef const_iterator;) 108 485.52 T
+(    typedef size_type;) 108 474.52 T
+(    typedef difference_type;) 108 463.52 T
+(// allocation/deallocation) 108 441.52 T
+(    hash_multimap\050size_type table_size = 1007,) 108 419.52 T
+(const Hasher& hf = Hasher\050\051,) 216 408.52 T
+(const KeyEqual& equal = KeyEqual\050\051\051;) 216 397.52 T
+(    template <class InputIterator>) 108 386.52 T
+(    hash_multimap\050InputIterator first, InputIterator last,) 108 375.52 T
+(size_type table_size = 10007,) 216 364.52 T
+(const Hasher& hf = Hasher\050\051,) 216 353.52 T
+(const KeyEqual& equal = KeyEqual\050\051\051;) 216 342.52 T
+(    ~hash_multimap\050\051;) 108 331.52 T
+(// copying, assignment, swap) 108 309.52 T
+(    hash_multimap\050const hash_multimap<Key, T, Hasher, KeyEqual, Allocator>& x\051;) 108 287.52 T
+(    hash_multimap<Key, T, Hasher, KeyEqual, Allocator>&) 108 276.52 T
+(      operator=\050const hash_multimap<Key, T, Hasher,KeyEqual, Allocator>& x\051;) 108 265.52 T
+(    void swap\050hash_multimap<Key, T, Hasher, KeyEqual, Allocator>& x\051;) 108 254.52 T
+(// accessors:) 108 232.52 T
+(    key_equal key_eq\050\051 const;) 108 210.52 T
+(    hasher hash_funct\050\051 const;) 108 199.52 T
+(    iterator begin\050\051;) 108 188.52 T
+(    const_iterator begin\050\051 const;) 108 177.52 T
+(    iterator end\050\051;) 108 166.52 T
+(    const_iterator end\050\051 const;) 108 155.52 T
+(    bool empty\050\051 const;) 108 144.52 T
+(    size_type size\050\051 const;) 108 133.52 T
+(    size_type max_size\050\051 const;) 108 122.52 T
+(// insert/erase) 108 100.52 T
+(    iterator insert\050const value_type& x\051;) 108 78.52 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "18" 20
+%%Page: "19" 21
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(19) 301 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+5 9 Q
+0 X
+(    template <class InputIterator>) 108 714 T
+(    void insert\050InputIterator first, InputIterator last\051;) 108 703 T
+(    void erase\050iterator position\051;) 108 692 T
+(    size_type erase\050const key_type& x\051;) 108 681 T
+(    void erase\050iterator first, iterator last\051;) 108 670 T
+(// search operations:) 108 648 T
+(    iterator find\050const key_type& x\051;) 108 626 T
+(    const_iterator find\050const key_type& x\051 const;) 108 615 T
+(    size_type count\050const key_type& x\051 const;) 108 604 T
+(    pair<iterator, iterator> equal_range\050const key_type& x\051;) 108 593 T
+(    pair<const_iterator, const_iterator> equal_range\050const key_type& x\051 const;) 108 582 T
+(// hash table size operations) 108 560 T
+(    size_type bucket_count\050\051 const;) 108 538 T
+(    void resize\050size_type size\051;) 108 527 T
+(};) 108 516 T
+(template <class Key, class T, class Hasher, class KeyEqual, Allocator>) 108 494 T
+(bool operator==\050const hash_multimap<Key, T, Hasher, KeyEqual, Allocator>& x,) 108 483 T
+(const hash_multimap<Key, T, Hasher, KeyEqual, Allocator>& y\051;) 190.8 472 T
+(iterator) 72 442.33 T
+3 10 Q
+( is a forward iterator referring to) 115.2 442.33 T
+5 9 Q
+( value_type) 258.84 442.33 T
+3 10 Q
+(. The exact type is implementation dependent) 318.24 442.33 T
+(and determined by) 72 430.33 T
+5 9 Q
+( Allocator) 156.38 430.33 T
+3 10 Q
+(.) 210.38 430.33 T
+5 9 Q
+(const_iterator) 72 411.33 T
+3 10 Q
+(is the a constant forward iterator referring to) 153 411.33 T
+5 9 Q
+( const value_type) 350.31 411.33 T
+3 10 Q
+(. The exact type is) 442.11 411.33 T
+-0.01 (implementation dependent and determined by) 72 399.33 P
+5 9 Q
+-0.03 ( Allocator) 279.42 399.33 P
+3 10 Q
+-0.01 (. It is guaranteed that there is a constructor for) 333.4 399.33 P
+5 9 Q
+(const_iterator) 72 387.33 T
+3 10 Q
+(out of) 153 387.33 T
+5 9 Q
+( iterator) 179.04 387.33 T
+3 10 Q
+(.) 227.64 387.33 T
+5 9 Q
+-0.03 (size_type) 72 368.33 P
+3 10 Q
+-0.01 (is an unsigned integral type. The exact type is implementation dependent and determined by) 125.97 368.33 P
+5 9 Q
+(Allocator) 72 356.33 T
+3 10 Q
+(.) 120.6 356.33 T
+5 9 Q
+-0.19 (difference_type) 72 337.33 P
+3 10 Q
+-0.09 (is a signed integral type. The exact type is implementation dependent and determined) 158.21 337.33 P
+(by) 72 325.33 T
+5 9 Q
+( Allocator) 83.09 325.33 T
+3 10 Q
+(.) 137.09 325.33 T
+0 12 Q
+(3  Hash Table Implementations) 72 276.25 T
+3 10 Q
+2.82 (We have developed two separate reference hash table implementations that meet all of the above) 72 257.96 P
+-0.09 (requirements. Both use the method of separate chaining, but with somewhat different ways of storing lists) 72 245.96 P
+2.08 (in the hash buckets. The major difference between the two implementations is the way they handle) 72 233.96 P
+-0.2 (expansion. More detail about these implementations, including performance comparisons, will be given in) 72 221.96 P
+(a separate report.) 72 209.96 T
+1.96 (In order to realize the amortized constant time bounds for insertion, searching, and erasure that are) 72 190.96 P
+1.62 (required for hash tables \050Time Complexity entries in Table 2\051, it is necessary that hash tables expand) 72 178.96 P
+0.01 (dynamically \050increasing the number of buckets\051 as the number of items stored grows. A simple method of) 72 166.96 P
+0.24 (expansion is often used: allocate another, larger, table of buckets; rehash all items in the old table into the) 72 154.96 P
+-0.37 (new table; and deallocate the old table.  This method, which we call) 72 142.96 P
+4 F
+-0.37 (intermittent resizing) 368.2 142.96 P
+3 F
+-0.37 (, it can be very time-) 452.01 142.96 P
+0.39 (consuming, perhaps prohibitively so in some applications requiring very fast response-times. A different) 72 130.96 P
+-0.24 (implementation avoids this potential bottleneck by expanding \050or contracting\051 the table on a gradual basis;) 72 118.96 P
+0.46 (it could be called) 72 106.96 P
+4 F
+0.46 (gradual resizing) 151.43 106.96 P
+3 F
+0.46 (. The method used is based mainly on one described in Per-Ake Larson,) 217.72 106.96 P
+4 F
+(CACM) 72 94.96 T
+3 F
+(, Vol. 31, Number 4, April 1988.) 102 94.96 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "19" 21
+%%Page: "20" 22
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+72 18 540 63 R
+7 X
+0 0 0 1 0 0 0 K
+V
+3 10 Q
+0 X
+(20) 301 56.33 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+72 72 540 720 R
+7 X
+V
+0 12 Q
+0 X
+(4  Acknowledgements) 72 711.25 T
+3 10 Q
+0.64 (Alex Stepanov and Meng Lee provided helpful comments on the drafts of this document and suggested) 72 692.96 P
+(several significant improvements.) 72 680.96 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "20" 22
+%%Trailer
+%%BoundingBox: 0 0 612 792
+%%PageOrder: Ascend
+%%Pages: 22
+%%DocumentFonts: Helvetica-Bold
+%%+ Times-Italic
+%%+ Helvetica
+%%+ Palatino-Roman
+%%+ Palatino-Italic
+%%+ Courier
+%%+ Times-Bold
+%%+ Times-Roman
+%%+ Helvetica-Oblique
+%%EOF

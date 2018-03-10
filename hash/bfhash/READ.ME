@@ -1,0 +1,25 @@
+
+This is a preliminary distribution of a hash table program for STL.
+The hash.h includes 4 forms of hash table:  hash_set, hash_multiset,
+hash_map, and hash_multimap corresponding to the respective tree
+implementations already found in STL.  The file hashbase.h contains
+the underlying implementation.
+
+The interfaces have been made to closely resemble those of the
+existing associative container classes, but removing properties which
+are order dependent.  Details of the properties can be found in the
+proposal document.  There is a second document which tells about the
+implementation.  
+
+While some initial testing has taken place, this is not fully tested
+software.  It is being distributed for experimentation only.
+
+The performance numbers presented in the implementation document were
+made with a string hash function.  The function calls the included
+char * hash funciton.  The results for integer keys were made by
+returning the number itself as the hash value.  (This value is then
+divided by the number of buckets, which is an odd number.) 
+
+Bob Fraley
+Hewlett-Packard
+fraley@hpl.hp.com
